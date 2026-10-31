@@ -1,0 +1,7 @@
+assets/footage/
+assets/music/
+assets/sfx/*.wav
+raw/
+renders/
+snapshots/
+node_modules/
