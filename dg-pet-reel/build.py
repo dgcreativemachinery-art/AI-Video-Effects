@@ -239,7 +239,7 @@ TEMPLATE = r"""<!doctype html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=%W%, height=%H%" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="assets/vendor/gsap.min.js"></script>
     <style>
       @font-face { font-family: "Nastaliq"; src: url("assets/fonts/nastaliq-700.ttf"); font-weight: 700; }
       @font-face { font-family: "Anton"; src: url("assets/fonts/anton.ttf"); }
