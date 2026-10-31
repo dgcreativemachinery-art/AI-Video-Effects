@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ur">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=2160, height=3840" />
@@ -25,8 +25,8 @@
       .flash-in { position: absolute; inset: 0; background: #fff; mix-blend-mode: screen; opacity: 0; }
       /* top glass pill */
       .pillwrap { position: absolute; left: 0; right: 0; top: 430px; height: 240px; display: flex; justify-content: center; }
-      .pill { font-family: "Nastaliq", "MontBlack"; font-weight: 700; font-size: 74px; line-height: 1.9; color: #fff; direction: rtl;
-        padding: 6px 70px 18px; border-radius: 120px; background: linear-gradient(180deg, rgba(255,255,255,.26), rgba(255,255,255,.08));
+      .pill { font-family: "MontBlack"; font-weight: 900; font-size: 64px; line-height: 1.2; letter-spacing: .08em; color: #fff;
+        padding: 30px 74px; border-radius: 120px; background: linear-gradient(180deg, rgba(255,255,255,.26), rgba(255,255,255,.08));
         border: 3px solid rgba(255,255,255,.45); backdrop-filter: blur(28px) saturate(160%); -webkit-backdrop-filter: blur(28px) saturate(160%);
         box-shadow: 0 30px 80px rgba(0,0,0,.35), inset 0 2px 0 rgba(255,255,255,.6); white-space: nowrap; }
       /* captions */
@@ -35,13 +35,13 @@
       .kinw { top: 2250px; }
       .slamw { top: 1700px; }
       .topw { top: 700px; }
-      .cap { font-family: "Nastaliq"; font-weight: 700; direction: rtl; color: var(--c); white-space: nowrap; overflow: visible; }
-      .cap.chin { font-size: 132px; line-height: 2.0; text-shadow: 0 8px 30px rgba(0,0,0,.85), 0 0 4px rgba(0,0,0,.9); }
-      .cap.kin { font-size: 190px; line-height: 2.0; text-shadow: 0 10px 40px rgba(0,0,0,.9), 0 0 6px rgba(0,0,0,.8);
-        -webkit-text-stroke: 3px rgba(0,0,0,.35); }
-      .cap.slam { font-size: 260px; line-height: 2.0; text-shadow: 0 16px 60px rgba(0,0,0,.9); }
-      .cap.latin { font-family: "Anton"; direction: ltr; letter-spacing: .02em; line-height: 1.15; }
-      .cap.slam.latin { font-size: 380px; }
+      .cap { font-family: "MontBlack"; font-weight: 900; color: var(--c); overflow: visible; max-width: 1840px;
+        white-space: normal; line-height: 1.08; letter-spacing: -0.01em; }
+      .cap.chin { font-size: 118px; text-shadow: 0 8px 30px rgba(0,0,0,.85), 0 0 4px rgba(0,0,0,.9); }
+      .cap.kin { font-size: 150px; text-transform: uppercase; text-shadow: 0 10px 40px rgba(0,0,0,.9), 0 0 6px rgba(0,0,0,.8);
+        -webkit-text-stroke: 4px rgba(0,0,0,.35); paint-order: stroke fill; }
+      .cap.slam { font-family: "Anton"; font-weight: 400; font-size: 260px; text-transform: uppercase; line-height: 1.0; letter-spacing: .01em;
+        text-shadow: 0 16px 60px rgba(0,0,0,.9); }
       /* glass carousel: cards ride a ring around the presenter's waist, below the face */
       .carousel { position: absolute; inset: 0; pointer-events: none; perspective: 2600px; }
       .ring { position: absolute; left: 1080px; top: 2620px; width: 0; height: 0; transform-style: preserve-3d; }
@@ -61,132 +61,148 @@
     <div id="root" data-composition-id="main" data-start="0" data-duration="55.98" data-width="2160" data-height="3840">
       <div id="sh1" class="shot" style="z-index:10"><div class="mv" id="sh1m"><video id="sh1v" class="clip" src="assets/footage/p1_walk_bales.mp4" data-start="0.0" data-duration="1.34" data-media-start="1.28" data-track-index="1" muted playsinline></video></div></div>
       <div id="pl2" class="clip pillwrap" data-start="0.000" data-duration="1.340" data-track-index="4" style="z-index:200"><div class="pill" id="pl2i">DG TECH MACHINERY</div></div>
-      <div id="cp3" class="clip capwrap chinw" data-start="0.020" data-duration="0.820" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp3t" style="--c:#FFFFFF">یہ صرف کباڑ</div></div>
-      <div id="cp4" class="clip capwrap chinw" data-start="0.840" data-duration="0.500" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp4t" style="--c:#FF4B3E">نہیں ہے!</div></div>
+      <div id="cp3" class="clip capwrap chinw" data-start="0.020" data-duration="0.820" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp3t" style="--c:#FFFFFF">Yeh sirf kabaar</div></div>
+      <div id="cp4" class="clip capwrap chinw" data-start="0.840" data-duration="0.500" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp4t" style="--c:#FF4B3E">nahi hai!</div></div>
       <div id="sh5" class="shot" style="z-index:10"><div class="mv" id="sh5m"><video id="sh5v" class="clip" src="assets/footage/r1_flakes_presenter.mp4" data-start="1.4" data-duration="3.75" data-media-start="3.15" data-track-index="1" muted playsinline></video></div></div>
       <div id="fl6" class="clip flash" data-start="1.350" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl6i"></div></div>
-      <div id="cp7" class="clip capwrap chinw" data-start="1.430" data-duration="1.060" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp7t" style="--c:#FFC83D">یہ کروڑوں کا</div></div>
-      <div id="cp8" class="clip capwrap chinw" data-start="2.490" data-duration="0.860" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp8t" style="--c:#FFFFFF">وہ خام مال ہے</div></div>
-      <div id="cp9" class="clip capwrap chinw" data-start="3.350" data-duration="0.840" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp9t" style="--c:#FFFFFF">دنیا جسے</div></div>
-      <div id="cp10" class="clip capwrap chinw" data-start="4.190" data-duration="0.960" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp10t" style="--c:#FF4B3E">کچرا سمجھتی ہے</div></div>
+      <div id="cp7" class="clip capwrap chinw" data-start="1.430" data-duration="1.060" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp7t" style="--c:#FFC83D">Yeh croron ka</div></div>
+      <div id="cp8" class="clip capwrap chinw" data-start="2.490" data-duration="0.860" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp8t" style="--c:#FFFFFF">woh khaam maal hai</div></div>
+      <div id="cp9" class="clip capwrap chinw" data-start="3.350" data-duration="0.840" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp9t" style="--c:#FFFFFF">duniya jise</div></div>
+      <div id="cp10" class="clip capwrap chinw" data-start="4.190" data-duration="0.960" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp10t" style="--c:#FF4B3E">kachra samajhti hai</div></div>
       <div id="sh11" class="shot" style="z-index:10"><div class="mv" id="sh11m"><video id="sh11v" class="clip" src="assets/footage/p2_pick_bottles.mp4" data-start="5.21" data-duration="1.53" data-media-start="0.95" data-track-index="1" muted playsinline></video></div></div>
       <div id="fl12" class="clip flash" data-start="5.160" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl12i"></div></div>
       <div id="cr13" class="clip carousel" data-start="5.21" data-duration="1.53" data-track-index="3" style="z-index:150" data-layout-allow-overlap data-layout-allow-occlusion><div class="ring" id="cr13r"><div class="card" id="cr13c0" data-layout-ignore><img src="assets/cards/f2_0.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr13c1" data-layout-ignore><img src="assets/cards/f2_1.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr13c2" data-layout-ignore><img src="assets/cards/f2_2.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr13c3" data-layout-ignore><img src="assets/cards/f2_3.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr13c4" data-layout-ignore><img src="assets/cards/f2_4.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr13c5" data-layout-ignore><img src="assets/cards/f2_5.jpg" alt=""><div class="shine"></div></div></div></div>
-      <div id="cp14" class="clip capwrap chinw" data-start="5.260" data-duration="0.740" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp14t" style="--c:#FFFFFF">لیکن ہم اس سے</div></div>
-      <div id="cp15" class="clip capwrap chinw" data-start="6.000" data-duration="0.740" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp15t" style="--c:#FFC83D">نوٹ کمائیں گے</div></div>
-      <div id="sh16" class="shot" style="z-index:10"><div class="mv" id="sh16m"><video id="sh16v" class="clip" src="assets/footage/r2_bales_conveyor.mp4" data-start="6.8" data-duration="2.81" data-media-start="0.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="cp14" class="clip capwrap chinw" data-start="5.260" data-duration="0.740" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp14t" style="--c:#FFFFFF">Lekin hum is se</div></div>
+      <div id="cp15" class="clip capwrap chinw" data-start="6.000" data-duration="0.740" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp15t" style="--c:#FFC83D">note kamayen ge</div></div>
+      <div id="sh16" class="shot" style="z-index:10"><div class="mv" id="sh16m"><video id="sh16v" class="clip" src="assets/footage/f3_preform_talk.mp4" data-start="6.8" data-duration="1.25" data-media-start="8.0" data-track-index="1" muted playsinline></video></div></div>
       <div id="fl17" class="clip flash" data-start="6.750" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl17i"></div></div>
-      <div id="pl18" class="clip pillwrap" data-start="6.800" data-duration="2.810" data-track-index="4" style="z-index:200"><div class="pill" id="pl18i">STEP 1 · دھلائی</div></div>
-      <div id="cp19" class="clip capwrap kinw" data-start="6.800" data-duration="0.530" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp19t" style="--c:#FFC83D">پہلا قدم</div></div>
-      <div id="cp20" class="clip capwrap kinw" data-start="7.330" data-duration="1.280" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp20t" style="--c:#FFFFFF">گلی گلی سے بکھرے ہوئے</div></div>
-      <div id="cp21" class="clip capwrap kinw" data-start="8.610" data-duration="1.000" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp21t" style="--c:#3FE0FF">اس پلاسٹک کو اٹھانا</div></div>
-      <div id="sh22" class="shot" style="z-index:10"><div class="mv" id="sh22m"><video id="sh22v" class="clip" src="assets/footage/r2_bales_conveyor.mp4" data-start="9.67" data-duration="1.6" data-media-start="4.6" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl23" class="clip flash" data-start="9.620" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl23i"></div></div>
-      <div id="sh24" class="shot" style="z-index:10"><div class="mv" id="sh24m"><video id="sh24v" class="clip" src="assets/footage/ai1_wash_tank.mp4" data-start="11.27" data-duration="2.42" data-media-start="0.5" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl25" class="clip flash" data-start="11.220" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl25i"></div></div>
-      <div id="pl26" class="clip pillwrap" data-start="9.670" data-duration="4.020" data-track-index="4" style="z-index:200"><div class="pill" id="pl26i">STEP 1 · دھلائی</div></div>
-      <div id="cp27" class="clip capwrap kinw" data-start="9.690" data-duration="1.380" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp27t" style="--c:#FFC83D">پھر DG Tech مشینری کے</div></div>
-      <div id="cp28" class="clip capwrap kinw" data-start="11.070" data-duration="1.160" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp28t" style="--c:#FFFFFF">اس طاقتور پلانٹ پر</div></div>
-      <div id="cp29" class="clip capwrap kinw" data-start="12.230" data-duration="1.040" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp29t" style="--c:#3FE0FF">اس کی زبردست دھلائی</div></div>
-      <div id="cp30" class="clip capwrap kinw" data-start="13.270" data-duration="0.420" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp30t" style="--c:#FFFFFF">ہوتی ہے</div></div>
-      <div id="sh31" class="shot" style="z-index:10"><div class="mv" id="sh31m"><video id="sh31v" class="clip" src="assets/footage/ai2_wash_jets.mp4" data-start="13.75" data-duration="2.06" data-media-start="1.4" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl32" class="clip flash" data-start="13.700" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl32i"></div></div>
-      <div id="cp33" class="clip capwrap kinw" data-start="13.750" data-duration="0.860" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp33t" style="--c:#FFFFFF">جہاں میل کا</div></div>
-      <div id="cp34" class="clip capwrap kinw" data-start="14.610" data-duration="1.200" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp34t" style="--c:#3FE0FF">نام و نشان مٹ جاتا ہے</div></div>
-      <div id="sh35" class="shot" style="z-index:10"><div class="mv" id="sh35m"><video id="sh35v" class="clip" src="assets/footage/ai3_crusher.mp4" data-start="15.87" data-duration="1.86" data-media-start="0.4" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl36" class="clip flash" data-start="15.820" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl36i"></div></div>
-      <div id="pl37" class="clip pillwrap" data-start="15.870" data-duration="1.860" data-track-index="4" style="z-index:200"><div class="pill" id="pl37i">STEP 2 · کرشنگ</div></div>
-      <div id="cp38" class="clip capwrap kinw" data-start="15.870" data-duration="0.800" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp38t" style="--c:#FFFFFF">اس کے بعد آتا ہے</div></div>
-      <div id="cp39" class="clip capwrap slamw" data-start="16.670" data-duration="1.060" data-track-index="5" style="z-index:250"><div class="cap slam" id="cp39t" style="--c:#FF4B3E">کرشنگ کا وہ مرحلہ</div></div>
-      <div id="sh40" class="shot" style="z-index:10"><div class="mv" id="sh40m"><video id="sh40v" class="clip" src="assets/footage/ai3_crusher.mp4" data-start="17.79" data-duration="0.9" data-media-start="2.3" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl41" class="clip flash" data-start="17.740" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl41i"></div></div>
-      <div id="sh42" class="shot" style="z-index:10"><div class="mv" id="sh42m"><video id="sh42v" class="clip" src="assets/footage/ai4_flakes_pour.mp4" data-start="18.69" data-duration="1.3" data-media-start="0.5" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl43" class="clip flash" data-start="18.640" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl43i"></div></div>
-      <div id="sh44" class="shot" style="z-index:10"><div class="mv" id="sh44m"><video id="sh44v" class="clip" src="assets/footage/r1_flakes_presenter.mp4" data-start="19.99" data-duration="0.95" data-media-start="0.0" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl45" class="clip flash" data-start="19.940" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl45i"></div></div>
-      <div id="pl46" class="clip pillwrap" data-start="17.790" data-duration="3.150" data-track-index="4" style="z-index:200"><div class="pill" id="pl46i">STEP 2 · کرشنگ</div></div>
-      <div id="cp47" class="clip capwrap kinw" data-start="17.790" data-duration="0.870" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp47t" style="--c:#FFFFFF">جس پر سخت بوتلیں</div></div>
-      <div id="cp48" class="clip capwrap kinw" data-start="18.660" data-duration="0.780" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp48t" style="--c:#FF4B3E">ریزہ ریزہ ہو کر</div></div>
-      <div id="cp49" class="clip capwrap kinw" data-start="19.440" data-duration="0.820" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp49t" style="--c:#8BFF5A">چمکدار فلیکس</div></div>
-      <div id="cp50" class="clip capwrap kinw" data-start="20.260" data-duration="0.680" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp50t" style="--c:#FFFFFF">بن جاتی ہیں</div></div>
-      <div id="sh51" class="shot" style="z-index:10"><div class="mv" id="sh51m"><video id="sh51v" class="clip" src="assets/footage/f1_flakes_yard.mp4" data-start="21.0" data-duration="1.8" data-media-start="1.5" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl52" class="clip flash" data-start="20.950" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl52i"></div></div>
-      <div id="sh53" class="shot" style="z-index:10"><div class="mv" id="sh53m"><video id="sh53v" class="clip" src="assets/footage/r1_flakes_presenter.mp4" data-start="22.8" data-duration="1.73" data-media-start="7.0" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl54" class="clip flash" data-start="22.750" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl54i"></div></div>
-      <div id="cp55" class="clip capwrap kinw" data-start="21.000" data-duration="0.500" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp55t" style="--c:#FFFFFF">اور یہیں سے</div></div>
-      <div id="cp56" class="clip capwrap kinw" data-start="21.500" data-duration="0.620" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp56t" style="--c:#FFFFFF">شروع ہوتی ہے</div></div>
-      <div id="cp57" class="clip capwrap kinw" data-start="22.120" data-duration="0.860" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp57t" style="--c:#FFC83D">اصل گیم</div></div>
-      <div id="cp58" class="clip capwrap topw" data-start="22.980" data-duration="1.550" data-track-index="5" style="z-index:250"><div class="cap slam" id="cp58t" style="--c:#FFC83D">یعنی کیش جنریشن!</div></div>
-      <div id="sh59" class="shot" style="z-index:10"><div class="mv" id="sh59m"><video id="sh59v" class="clip" src="assets/footage/m5_factory_wide.mp4" data-start="24.59" data-duration="2.9" data-media-start="0.0" data-playback-rate="0.86" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl60" class="clip flash" data-start="24.540" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl60i"></div></div>
-      <div id="pl61" class="clip pillwrap" data-start="24.590" data-duration="2.900" data-track-index="4" style="z-index:200"><div class="pill" id="pl61i">STEP 3 · پری فارم</div></div>
-      <div id="cp62" class="clip capwrap kinw" data-start="24.690" data-duration="0.600" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp62t" style="--c:#FFFFFF">اب ان فلیکس کو</div></div>
-      <div id="cp63" class="clip capwrap kinw" data-start="25.290" data-duration="0.620" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp63t" style="--c:#FFFFFF">ڈالا جاتا ہے</div></div>
-      <div id="cp64" class="clip capwrap kinw" data-start="25.910" data-duration="0.380" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp64t" style="--c:#FFC83D">DG Tech</div></div>
-      <div id="cp65" class="clip capwrap kinw" data-start="26.290" data-duration="1.200" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp65t" style="--c:#3FE0FF">انجیکشن مولڈنگ مشین میں</div></div>
-      <div id="sh66" class="shot" style="z-index:10"><div class="mv" id="sh66m"><video id="sh66v" class="clip" src="assets/footage/p3_preforms.mp4" data-start="27.55" data-duration="2.63" data-media-start="0.7" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl67" class="clip flash" data-start="27.500" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl67i"></div></div>
-      <div id="cr68" class="clip carousel" data-start="27.55" data-duration="2.63" data-track-index="3" style="z-index:150" data-layout-allow-overlap data-layout-allow-occlusion><div class="ring" id="cr68r"><div class="card" id="cr68c0" data-layout-ignore><img src="assets/cards/f3_0.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr68c1" data-layout-ignore><img src="assets/cards/f3_1.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr68c2" data-layout-ignore><img src="assets/cards/f3_2.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr68c3" data-layout-ignore><img src="assets/cards/f3_3.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr68c4" data-layout-ignore><img src="assets/cards/f3_4.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr68c5" data-layout-ignore><img src="assets/cards/f3_5.jpg" alt=""><div class="shine"></div></div></div></div>
-      <div id="cp69" class="clip capwrap chinw" data-start="27.600" data-duration="0.670" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp69t" style="--c:#FFFFFF">جو بناتی ہے</div></div>
-      <div id="cp70" class="clip capwrap chinw" data-start="28.270" data-duration="0.820" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp70t" style="--c:#FFFFFF">ایک بہترین اور</div></div>
-      <div id="cp71" class="clip capwrap chinw" data-start="29.090" data-duration="1.090" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp71t" style="--c:#3FE0FF">مضبوط پری فارم</div></div>
-      <div id="sh72" class="shot" style="z-index:10"><div class="mv" id="sh72m"><video id="sh72v" class="clip" src="assets/footage/m2_blow_load.mp4" data-start="30.24" data-duration="1.96" data-media-start="2.0" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl73" class="clip flash" data-start="30.190" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl73i"></div></div>
-      <div id="pl74" class="clip pillwrap" data-start="30.240" data-duration="1.960" data-track-index="4" style="z-index:200"><div class="pill" id="pl74i">STEP 4 · بوتل</div></div>
-      <div id="cp75" class="clip capwrap kinw" data-start="30.260" data-duration="1.020" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp75t" style="--c:#FF4B3E">اور پھر آخری وار</div></div>
-      <div id="cp76" class="clip capwrap kinw" data-start="31.280" data-duration="0.920" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp76t" style="--c:#3FE0FF">بلو مولڈنگ مشین</div></div>
-      <div id="sh77" class="shot" style="z-index:10"><div class="mv" id="sh77m"><video id="sh77v" class="clip" src="assets/footage/p4_heater.mp4" data-start="32.26" data-duration="1.6" data-media-start="1.83" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl78" class="clip flash" data-start="32.210" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl78i"></div></div>
-      <div id="sh79" class="shot" style="z-index:10"><div class="mv" id="sh79m"><video id="sh79v" class="clip" src="assets/footage/m6_mould_closeup.mp4" data-start="33.86" data-duration="1.15" data-media-start="3.0" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl80" class="clip flash" data-start="33.810" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl80i"></div></div>
-      <div id="sh81" class="shot" style="z-index:10"><div class="mv" id="sh81m"><video id="sh81v" class="clip" src="assets/footage/m3_mould_bottles.mp4" data-start="35.01" data-duration="0.74" data-media-start="0.0" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl82" class="clip flash" data-start="34.960" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl82i"></div></div>
-      <div id="cp83" class="clip capwrap chinw" data-start="32.280" data-duration="0.770" data-track-index="5" style="z-index:250"><div class="cap chin" id="cp83t" style="--c:#FFFFFF">جو اس پری فارم کو</div></div>
-      <div id="cp84" class="clip capwrap kinw" data-start="33.050" data-duration="0.620" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp84t" style="--c:#FFC83D">سیکنڈوں میں</div></div>
-      <div id="cp85" class="clip capwrap kinw" data-start="33.670" data-duration="1.200" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp85t" style="--c:#3FE0FF">ایک تیار بوتل میں</div></div>
-      <div id="cp86" class="clip capwrap kinw" data-start="34.870" data-duration="0.880" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp86t" style="--c:#FFFFFF">بدل دیتی ہے</div></div>
-      <div id="sh87" class="shot" style="z-index:10"><div class="mv" id="sh87m"><video id="sh87v" class="clip" src="assets/footage/m4_compressor.mp4" data-start="35.81" data-duration="1.57" data-media-start="0.83" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl88" class="clip flash" data-start="35.760" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl88i"></div></div>
-      <div id="cp89" class="clip capwrap kinw" data-start="35.860" data-duration="0.500" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp89t" style="--c:#FFFFFF">اب سنیے</div></div>
-      <div id="cp90" class="clip capwrap slamw" data-start="36.360" data-duration="1.020" data-track-index="5" style="z-index:250"><div class="cap slam" id="cp90t" style="--c:#FFC83D">پرافٹ کا فارمولا</div></div>
-      <div id="sh91" class="shot" style="z-index:10"><div class="mv" id="sh91m"><video id="sh91v" class="clip" src="assets/footage/s2_stacks_b.mp4" data-start="37.44" data-duration="2.5" data-media-start="1.0" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl92" class="clip flash" data-start="37.390" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl92i"></div></div>
-      <div id="sh93" class="shot" style="z-index:10"><div class="mv" id="sh93m"><video id="sh93v" class="clip" src="assets/footage/m1_blow_button.mp4" data-start="39.94" data-duration="2.4" data-media-start="1.0" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl94" class="clip flash" data-start="39.890" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl94i"></div></div>
-      <div id="sh95" class="shot" style="z-index:10"><div class="mv" id="sh95m"><video id="sh95v" class="clip" src="assets/footage/ai5_cash.mp4" data-start="42.34" data-duration="2.48" data-media-start="0.5" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl96" class="clip flash" data-start="42.290" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl96i"></div></div>
-      <div id="pl97" class="clip pillwrap" data-start="37.440" data-duration="7.380" data-track-index="4" style="z-index:200"><div class="pill" id="pl97i">STEP 5 · پرافٹ</div></div>
-      <div id="cp98" class="clip capwrap kinw" data-start="37.480" data-duration="1.120" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp98t" style="--c:#FFFFFF">یہ تیار شدہ بوتلیں</div></div>
-      <div id="cp99" class="clip capwrap kinw" data-start="38.600" data-duration="0.660" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp99t" style="--c:#FFFFFF">اور پروڈکٹس جب</div></div>
-      <div id="cp100" class="clip capwrap kinw" data-start="39.260" data-duration="0.960" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp100t" style="--c:#3FE0FF">بڑی بڑی ملٹی نیشنل</div></div>
-      <div id="cp101" class="clip capwrap kinw" data-start="40.220" data-duration="1.300" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp101t" style="--c:#FFFFFF">کمپنیوں کو سپلائی ہوتی ہیں</div></div>
-      <div id="cp102" class="clip capwrap kinw" data-start="41.520" data-duration="0.820" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp102t" style="--c:#FFFFFF">تو لاگت سے</div></div>
-      <div id="cp103" class="clip capwrap slamw" data-start="42.340" data-duration="1.200" data-track-index="5" style="z-index:250"><div class="cap slam" id="cp103t" style="--c:#FFC83D">کئی گنا زیادہ منافع</div></div>
-      <div id="cp104" class="clip capwrap kinw" data-start="43.540" data-duration="0.840" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp104t" style="--c:#8BFF5A">سیدھا آپ کی جیب میں</div></div>
-      <div id="cp105" class="clip capwrap kinw" data-start="44.380" data-duration="0.440" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp105t" style="--c:#FFFFFF">آتا ہے!</div></div>
-      <div id="sh106" class="shot" style="z-index:10"><div class="mv" id="sh106m"><video id="sh106v" class="clip" src="assets/footage/s1_stacks_a.mp4" data-start="44.88" data-duration="3.5" data-media-start="1.0" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl107" class="clip flash" data-start="44.830" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl107i"></div></div>
-      <div id="cp108" class="clip capwrap kinw" data-start="44.880" data-duration="0.780" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp108t" style="--c:#FFFFFF">بغیر ایک روپیہ</div></div>
-      <div id="cp109" class="clip capwrap kinw" data-start="45.660" data-duration="0.680" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp109t" style="--c:#FF4B3E">فالتو گنوائے</div></div>
-      <div id="cp110" class="clip capwrap kinw" data-start="46.340" data-duration="1.080" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp110t" style="--c:#FFC83D">صرف DG Tech مشینری</div></div>
-      <div id="cp111" class="clip capwrap kinw" data-start="47.420" data-duration="0.960" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp111t" style="--c:#3FE0FF">اور دماغ چلا کے</div></div>
-      <div id="sh112" class="shot" style="z-index:10"><div class="mv" id="sh112m"><video id="sh112v" class="clip" src="assets/footage/p5_banner.mp4" data-start="48.44" data-duration="1.3" data-media-start="0.0" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl113" class="clip flash" data-start="48.390" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl113i"></div></div>
-      <div id="sh114" class="clip gfx" data-start="49.74" data-duration="1.96" data-track-index="1" style="z-index:10"><div class="gfx-in" id="sh114g"><div class="orb o1"></div><div class="orb o2"></div><div class="gfx-brand">DG TECH MACHINERY</div></div></div>
-      <div id="fl115" class="clip flash" data-start="49.690" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl115i"></div></div>
-      <div id="cp116" class="clip capwrap kinw" data-start="48.480" data-duration="0.960" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp116t" style="--c:#8BFF5A">پیسے گھر لے جانے کا</div></div>
-      <div id="cp117" class="clip capwrap kinw" data-start="49.440" data-duration="0.540" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp117t" style="--c:#FFC83D">یہ موقع</div></div>
-      <div id="cp118" class="clip capwrap kinw" data-start="49.980" data-duration="0.980" data-track-index="5" style="z-index:250"><div class="cap kin" id="cp118t" style="--c:#FF4B3E">ہاتھ سے جانے مت دو</div></div>
-      <div id="cp119" class="clip capwrap slamw" data-start="50.960" data-duration="0.740" data-track-index="5" style="z-index:250"><div class="cap slam" id="cp119t" style="--c:#FFFFFF">یاد رکھو</div></div>
-      <div id="sh120" class="clip gfx" data-start="51.76" data-duration="0.96" data-track-index="1" style="z-index:10"><div class="gfx-in" id="sh120g"><div class="orb o1"></div><div class="orb o2"></div><div class="gfx-brand">DG TECH MACHINERY</div></div></div>
-      <div id="fl121" class="clip flash" data-start="51.710" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl121i"></div></div>
-      <div id="cp122" class="clip capwrap slamw" data-start="51.760" data-duration="0.960" data-track-index="5" style="z-index:250"><div class="cap slam latin" id="cp122t" style="--c:#FFC83D">THINK BIG</div></div>
-      <div id="sh123" class="shot" style="z-index:10"><div class="mv" id="sh123m"><video id="sh123v" class="clip" src="assets/footage/p5_banner.mp4" data-start="52.78" data-duration="2.05" data-media-start="1.3" data-track-index="1" muted playsinline></video></div></div>
-      <div id="fl124" class="clip flash" data-start="52.730" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl124i"></div></div>
-      <div id="sh125" class="clip gfx" data-start="54.83" data-duration="0.75" data-track-index="1" style="z-index:10"><div class="gfx-in" id="sh125g"><div class="orb o1"></div><div class="orb o2"></div><div class="gfx-brand">DG TECH MACHINERY</div></div></div>
-      <div id="fl126" class="clip flash" data-start="54.780" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl126i"></div></div>
-      <div id="cp127" class="clip capwrap slamw" data-start="52.780" data-duration="2.600" data-track-index="5" style="z-index:250"><div class="cap slam latin" id="cp127t" style="--c:#FFC83D">TO GET BIG</div></div>
-      <div id="end128" class="clip endcard" data-start="53.980" data-duration="2.000" data-track-index="6" style="z-index:260"><div class="end-in" id="end128i"><div class="end-logo">DG TECH MACHINERY</div><div class="end-sub">PET Recycling · Injection · Blow Moulding</div></div></div>
+      <div id="sh18" class="shot" style="z-index:10"><div class="mv" id="sh18m"><video id="sh18v" class="clip" src="assets/footage/r2_bales_conveyor.mp4" data-start="8.05" data-duration="1.56" data-media-start="0.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl19" class="clip flash" data-start="8.000" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl19i"></div></div>
+      <div id="pl20" class="clip pillwrap" data-start="8.100" data-duration="1.510" data-track-index="4" style="z-index:200"><div class="pill" id="pl20i">STEP 1 · WASHING</div></div>
+      <div id="cp21" class="clip capwrap kinw" data-start="6.800" data-duration="0.530" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp21t" style="--c:#FFC83D">Pehla qadam</div></div>
+      <div id="cp22" class="clip capwrap kinw" data-start="7.330" data-duration="1.280" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp22t" style="--c:#FFFFFF">gali gali se bikhre hue</div></div>
+      <div id="cp23" class="clip capwrap kinw" data-start="8.610" data-duration="1.000" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp23t" style="--c:#3FE0FF">is plastic ko uthana</div></div>
+      <div id="sh24" class="shot" style="z-index:10"><div class="mv" id="sh24m"><video id="sh24v" class="clip" src="assets/footage/r2_bales_conveyor.mp4" data-start="9.67" data-duration="1.6" data-media-start="4.6" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl25" class="clip flash" data-start="9.620" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl25i"></div></div>
+      <div id="sh26" class="shot" style="z-index:10"><div class="mv" id="sh26m"><video id="sh26v" class="clip" src="assets/footage/ai1_wash_tank.mp4" data-start="11.27" data-duration="2.42" data-media-start="0.5" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl27" class="clip flash" data-start="11.220" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl27i"></div></div>
+      <div id="pl28" class="clip pillwrap" data-start="9.670" data-duration="4.020" data-track-index="4" style="z-index:200"><div class="pill" id="pl28i">STEP 1 · WASHING</div></div>
+      <div id="cp29" class="clip capwrap kinw" data-start="9.690" data-duration="1.380" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp29t" style="--c:#FFC83D">phir DG Tech Machinery ke</div></div>
+      <div id="cp30" class="clip capwrap kinw" data-start="11.070" data-duration="1.160" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp30t" style="--c:#FFFFFF">is taqatwar plant par</div></div>
+      <div id="cp31" class="clip capwrap kinw" data-start="12.230" data-duration="1.040" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp31t" style="--c:#3FE0FF">is ki zabardast dhulai</div></div>
+      <div id="cp32" class="clip capwrap kinw" data-start="13.270" data-duration="0.420" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp32t" style="--c:#FFFFFF">hoti hai</div></div>
+      <div id="sh33" class="shot" style="z-index:10"><div class="mv" id="sh33m"><video id="sh33v" class="clip" src="assets/footage/ai2_wash_jets.mp4" data-start="13.75" data-duration="2.06" data-media-start="1.4" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl34" class="clip flash" data-start="13.700" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl34i"></div></div>
+      <div id="cp35" class="clip capwrap kinw" data-start="13.750" data-duration="0.860" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp35t" style="--c:#FFFFFF">jahan mail ka</div></div>
+      <div id="cp36" class="clip capwrap kinw" data-start="14.610" data-duration="1.200" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp36t" style="--c:#3FE0FF">naam-o-nishan mit jata hai</div></div>
+      <div id="sh37" class="shot" style="z-index:10"><div class="mv" id="sh37m"><video id="sh37v" class="clip" src="assets/footage/f3_preform_talk.mp4" data-start="15.87" data-duration="0.85" data-media-start="10.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl38" class="clip flash" data-start="15.820" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl38i"></div></div>
+      <div id="sh39" class="shot" style="z-index:10"><div class="mv" id="sh39m"><video id="sh39v" class="clip" src="assets/footage/ai3_crusher.mp4" data-start="16.72" data-duration="1.01" data-media-start="0.4" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl40" class="clip flash" data-start="16.670" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl40i"></div></div>
+      <div id="pl41" class="clip pillwrap" data-start="16.770" data-duration="0.960" data-track-index="4" style="z-index:200"><div class="pill" id="pl41i">STEP 2 · CRUSHING</div></div>
+      <div id="cp42" class="clip capwrap kinw" data-start="15.870" data-duration="0.800" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp42t" style="--c:#FFFFFF">Is ke baad aata hai</div></div>
+      <div id="cp43" class="clip capwrap slamw" data-start="16.670" data-duration="1.060" data-track-index="5" style="z-index:250"><div class="cap slam latin" id="cp43t" style="--c:#FF4B3E">crushing ka woh marhala</div></div>
+      <div id="sh44" class="shot" style="z-index:10"><div class="mv" id="sh44m"><video id="sh44v" class="clip" src="assets/footage/ai3_crusher.mp4" data-start="17.79" data-duration="0.9" data-media-start="2.3" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl45" class="clip flash" data-start="17.740" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl45i"></div></div>
+      <div id="sh46" class="shot" style="z-index:10"><div class="mv" id="sh46m"><video id="sh46v" class="clip" src="assets/footage/ai4_flakes_pour.mp4" data-start="18.69" data-duration="1.3" data-media-start="0.5" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl47" class="clip flash" data-start="18.640" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl47i"></div></div>
+      <div id="sh48" class="shot" style="z-index:10"><div class="mv" id="sh48m"><video id="sh48v" class="clip" src="assets/footage/r1_flakes_presenter.mp4" data-start="19.99" data-duration="0.95" data-media-start="0.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl49" class="clip flash" data-start="19.940" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl49i"></div></div>
+      <div id="pl50" class="clip pillwrap" data-start="17.790" data-duration="3.150" data-track-index="4" style="z-index:200"><div class="pill" id="pl50i">STEP 2 · CRUSHING</div></div>
+      <div id="cp51" class="clip capwrap kinw" data-start="17.790" data-duration="0.870" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp51t" style="--c:#FFFFFF">jis par sakht bottlein</div></div>
+      <div id="cp52" class="clip capwrap kinw" data-start="18.660" data-duration="0.780" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp52t" style="--c:#FF4B3E">reza reza ho kar</div></div>
+      <div id="cp53" class="clip capwrap kinw" data-start="19.440" data-duration="0.820" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp53t" style="--c:#8BFF5A">chamakdar flakes</div></div>
+      <div id="cp54" class="clip capwrap kinw" data-start="20.260" data-duration="0.680" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp54t" style="--c:#FFFFFF">ban jati hain</div></div>
+      <div id="sh55" class="shot" style="z-index:10"><div class="mv" id="sh55m"><video id="sh55v" class="clip" src="assets/footage/f1_flakes_yard.mp4" data-start="21.0" data-duration="1.8" data-media-start="1.5" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl56" class="clip flash" data-start="20.950" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl56i"></div></div>
+      <div id="sh57" class="shot" style="z-index:10"><div class="mv" id="sh57m"><video id="sh57v" class="clip" src="assets/footage/r1_flakes_presenter.mp4" data-start="22.8" data-duration="1.73" data-media-start="7.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl58" class="clip flash" data-start="22.750" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl58i"></div></div>
+      <div id="cp59" class="clip capwrap kinw" data-start="21.000" data-duration="0.500" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp59t" style="--c:#FFFFFF">aur yahin se</div></div>
+      <div id="cp60" class="clip capwrap kinw" data-start="21.500" data-duration="0.620" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp60t" style="--c:#FFFFFF">shuru hoti hai</div></div>
+      <div id="cp61" class="clip capwrap kinw" data-start="22.120" data-duration="0.860" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp61t" style="--c:#FFC83D">asal game</div></div>
+      <div id="cp62" class="clip capwrap topw" data-start="22.980" data-duration="1.550" data-track-index="5" style="z-index:250"><div class="cap slam latin" id="cp62t" style="--c:#FFC83D">yani CASH GENERATION!</div></div>
+      <div id="sh63" class="shot" style="z-index:10"><div class="mv" id="sh63m"><video id="sh63v" class="clip" src="assets/footage/f3_preform_talk.mp4" data-start="24.59" data-duration="1.3" data-media-start="12.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl64" class="clip flash" data-start="24.540" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl64i"></div></div>
+      <div id="sh65" class="shot" style="z-index:10"><div class="mv" id="sh65m"><video id="sh65v" class="clip" src="assets/footage/m5_factory_wide.mp4" data-start="25.89" data-duration="1.6" data-media-start="0.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl66" class="clip flash" data-start="25.840" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl66i"></div></div>
+      <div id="pl67" class="clip pillwrap" data-start="25.940" data-duration="1.550" data-track-index="4" style="z-index:200"><div class="pill" id="pl67i">STEP 3 · PREFORM</div></div>
+      <div id="cp68" class="clip capwrap kinw" data-start="24.690" data-duration="0.600" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp68t" style="--c:#FFFFFF">Ab in flakes ko</div></div>
+      <div id="cp69" class="clip capwrap kinw" data-start="25.290" data-duration="0.620" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp69t" style="--c:#FFFFFF">dala jata hai</div></div>
+      <div id="cp70" class="clip capwrap kinw" data-start="25.910" data-duration="0.380" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp70t" style="--c:#FFC83D">DG Tech</div></div>
+      <div id="cp71" class="clip capwrap kinw" data-start="26.290" data-duration="1.200" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp71t" style="--c:#3FE0FF">injection moulding machine mein</div></div>
+      <div id="sh72" class="shot" style="z-index:10"><div class="mv" id="sh72m"><video id="sh72v" class="clip" src="assets/footage/p3_preforms.mp4" data-start="27.55" data-duration="2.63" data-media-start="0.7" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl73" class="clip flash" data-start="27.500" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl73i"></div></div>
+      <div id="cr74" class="clip carousel" data-start="27.55" data-duration="2.63" data-track-index="3" style="z-index:150" data-layout-allow-overlap data-layout-allow-occlusion><div class="ring" id="cr74r"><div class="card" id="cr74c0" data-layout-ignore><img src="assets/cards/r3_0.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr74c1" data-layout-ignore><img src="assets/cards/r3_1.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr74c2" data-layout-ignore><img src="assets/cards/r3_2.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr74c3" data-layout-ignore><img src="assets/cards/r3_3.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr74c4" data-layout-ignore><img src="assets/cards/r3_4.jpg" alt=""><div class="shine"></div></div><div class="card" id="cr74c5" data-layout-ignore><img src="assets/cards/r3_5.jpg" alt=""><div class="shine"></div></div></div></div>
+      <div id="cp75" class="clip capwrap chinw" data-start="27.600" data-duration="0.670" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp75t" style="--c:#FFFFFF">jo banati hai</div></div>
+      <div id="cp76" class="clip capwrap chinw" data-start="28.270" data-duration="0.820" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp76t" style="--c:#FFFFFF">aik behtareen aur</div></div>
+      <div id="cp77" class="clip capwrap chinw" data-start="29.090" data-duration="1.090" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp77t" style="--c:#3FE0FF">mazboot preform</div></div>
+      <div id="sh78" class="shot" style="z-index:10"><div class="mv" id="sh78m"><video id="sh78v" class="clip" src="assets/footage/f3_preform_talk.mp4" data-start="30.24" data-duration="0.95" data-media-start="14.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl79" class="clip flash" data-start="30.190" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl79i"></div></div>
+      <div id="sh80" class="shot" style="z-index:10"><div class="mv" id="sh80m"><video id="sh80v" class="clip" src="assets/footage/m2_blow_load.mp4" data-start="31.19" data-duration="1.01" data-media-start="2.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl81" class="clip flash" data-start="31.140" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl81i"></div></div>
+      <div id="pl82" class="clip pillwrap" data-start="31.240" data-duration="0.960" data-track-index="4" style="z-index:200"><div class="pill" id="pl82i">STEP 4 · BOTTLE</div></div>
+      <div id="cp83" class="clip capwrap kinw" data-start="30.260" data-duration="1.020" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp83t" style="--c:#FF4B3E">aur phir aakhri waar</div></div>
+      <div id="cp84" class="clip capwrap kinw" data-start="31.280" data-duration="0.920" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp84t" style="--c:#3FE0FF">blow moulding machine</div></div>
+      <div id="sh85" class="shot" style="z-index:10"><div class="mv" id="sh85m"><video id="sh85v" class="clip" src="assets/footage/p4_heater.mp4" data-start="32.26" data-duration="1.6" data-media-start="1.83" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl86" class="clip flash" data-start="32.210" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl86i"></div></div>
+      <div id="sh87" class="shot" style="z-index:10"><div class="mv" id="sh87m"><video id="sh87v" class="clip" src="assets/footage/m6_mould_closeup.mp4" data-start="33.86" data-duration="1.15" data-media-start="3.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl88" class="clip flash" data-start="33.810" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl88i"></div></div>
+      <div id="sh89" class="shot" style="z-index:10"><div class="mv" id="sh89m"><video id="sh89v" class="clip" src="assets/footage/m3_mould_bottles.mp4" data-start="35.01" data-duration="0.74" data-media-start="0.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl90" class="clip flash" data-start="34.960" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl90i"></div></div>
+      <div id="cp91" class="clip capwrap chinw" data-start="32.280" data-duration="0.770" data-track-index="5" style="z-index:250"><div class="cap chin latin" id="cp91t" style="--c:#FFFFFF">jo is preform ko</div></div>
+      <div id="cp92" class="clip capwrap kinw" data-start="33.050" data-duration="0.620" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp92t" style="--c:#FFC83D">seconds mein</div></div>
+      <div id="cp93" class="clip capwrap kinw" data-start="33.670" data-duration="1.200" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp93t" style="--c:#3FE0FF">aik tayyar bottle mein</div></div>
+      <div id="cp94" class="clip capwrap kinw" data-start="34.870" data-duration="0.880" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp94t" style="--c:#FFFFFF">badal deti hai</div></div>
+      <div id="sh95" class="shot" style="z-index:10"><div class="mv" id="sh95m"><video id="sh95v" class="clip" src="assets/footage/f3_preform_talk.mp4" data-start="35.81" data-duration="0.85" data-media-start="16.5" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl96" class="clip flash" data-start="35.760" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl96i"></div></div>
+      <div id="sh97" class="shot" style="z-index:10"><div class="mv" id="sh97m"><video id="sh97v" class="clip" src="assets/footage/m4_compressor.mp4" data-start="36.66" data-duration="0.72" data-media-start="0.83" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl98" class="clip flash" data-start="36.610" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl98i"></div></div>
+      <div id="cp99" class="clip capwrap kinw" data-start="35.860" data-duration="0.500" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp99t" style="--c:#FFFFFF">Ab suniye</div></div>
+      <div id="cp100" class="clip capwrap slamw" data-start="36.360" data-duration="1.020" data-track-index="5" style="z-index:250"><div class="cap slam latin" id="cp100t" style="--c:#FFC83D">PROFIT ka formula</div></div>
+      <div id="sh101" class="shot" style="z-index:10"><div class="mv" id="sh101m"><video id="sh101v" class="clip" src="assets/footage/f3_preform_talk.mp4" data-start="37.44" data-duration="1.6" data-media-start="19.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl102" class="clip flash" data-start="37.390" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl102i"></div></div>
+      <div id="sh103" class="shot" style="z-index:10"><div class="mv" id="sh103m"><video id="sh103v" class="clip" src="assets/footage/s2_stacks_b.mp4" data-start="39.04" data-duration="1.8" data-media-start="1.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl104" class="clip flash" data-start="38.990" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl104i"></div></div>
+      <div id="sh105" class="shot" style="z-index:10"><div class="mv" id="sh105m"><video id="sh105v" class="clip" src="assets/footage/m1_blow_button.mp4" data-start="40.84" data-duration="1.5" data-media-start="1.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl106" class="clip flash" data-start="40.790" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl106i"></div></div>
+      <div id="sh107" class="shot" style="z-index:10"><div class="mv" id="sh107m"><video id="sh107v" class="clip" src="assets/footage/ai5_cash.mp4" data-start="42.34" data-duration="2.48" data-media-start="0.5" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl108" class="clip flash" data-start="42.290" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl108i"></div></div>
+      <div id="pl109" class="clip pillwrap" data-start="39.090" data-duration="5.730" data-track-index="4" style="z-index:200"><div class="pill" id="pl109i">STEP 5 · PROFIT</div></div>
+      <div id="cp110" class="clip capwrap kinw" data-start="37.480" data-duration="1.120" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp110t" style="--c:#FFFFFF">yeh tayyar shuda bottlein</div></div>
+      <div id="cp111" class="clip capwrap kinw" data-start="38.600" data-duration="0.660" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp111t" style="--c:#FFFFFF">aur products jab</div></div>
+      <div id="cp112" class="clip capwrap kinw" data-start="39.260" data-duration="0.960" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp112t" style="--c:#3FE0FF">bari bari multinational</div></div>
+      <div id="cp113" class="clip capwrap kinw" data-start="40.220" data-duration="1.300" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp113t" style="--c:#FFFFFF">companies ko supply hoti hain</div></div>
+      <div id="cp114" class="clip capwrap kinw" data-start="41.520" data-duration="0.820" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp114t" style="--c:#FFFFFF">to laagat se</div></div>
+      <div id="cp115" class="clip capwrap slamw" data-start="42.340" data-duration="1.200" data-track-index="5" style="z-index:250"><div class="cap slam latin" id="cp115t" style="--c:#FFC83D">kai guna zyada munafa</div></div>
+      <div id="cp116" class="clip capwrap kinw" data-start="43.540" data-duration="0.840" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp116t" style="--c:#8BFF5A">seedha aap ki jaib mein</div></div>
+      <div id="cp117" class="clip capwrap kinw" data-start="44.380" data-duration="0.440" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp117t" style="--c:#FFFFFF">aata hai!</div></div>
+      <div id="sh118" class="shot" style="z-index:10"><div class="mv" id="sh118m"><video id="sh118v" class="clip" src="assets/footage/f3_preform_talk.mp4" data-start="44.88" data-duration="1.6" data-media-start="22.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl119" class="clip flash" data-start="44.830" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl119i"></div></div>
+      <div id="sh120" class="shot" style="z-index:10"><div class="mv" id="sh120m"><video id="sh120v" class="clip" src="assets/footage/s1_stacks_a.mp4" data-start="46.48" data-duration="1.9" data-media-start="1.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl121" class="clip flash" data-start="46.430" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl121i"></div></div>
+      <div id="cp122" class="clip capwrap kinw" data-start="44.880" data-duration="0.780" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp122t" style="--c:#FFFFFF">baghair aik rupaya</div></div>
+      <div id="cp123" class="clip capwrap kinw" data-start="45.660" data-duration="0.680" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp123t" style="--c:#FF4B3E">faltu ganwaye</div></div>
+      <div id="cp124" class="clip capwrap kinw" data-start="46.340" data-duration="1.080" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp124t" style="--c:#FFC83D">sirf DG Tech Machinery</div></div>
+      <div id="cp125" class="clip capwrap kinw" data-start="47.420" data-duration="0.960" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp125t" style="--c:#3FE0FF">aur dimagh chala ke</div></div>
+      <div id="sh126" class="shot" style="z-index:10"><div class="mv" id="sh126m"><video id="sh126v" class="clip" src="assets/footage/p5_banner.mp4" data-start="48.44" data-duration="1.3" data-media-start="0.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl127" class="clip flash" data-start="48.390" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl127i"></div></div>
+      <div id="sh128" class="shot" style="z-index:10"><div class="mv" id="sh128m"><video id="sh128v" class="clip" src="assets/footage/f3_preform_talk.mp4" data-start="49.74" data-duration="1.0" data-media-start="25.0" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl129" class="clip flash" data-start="49.690" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl129i"></div></div>
+      <div id="sh130" class="clip gfx" data-start="50.74" data-duration="0.96" data-track-index="1" style="z-index:10"><div class="gfx-in" id="sh130g"><div class="orb o1"></div><div class="orb o2"></div><div class="gfx-brand">DG TECH MACHINERY</div></div></div>
+      <div id="fl131" class="clip flash" data-start="50.690" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl131i"></div></div>
+      <div id="cp132" class="clip capwrap kinw" data-start="48.480" data-duration="0.960" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp132t" style="--c:#8BFF5A">paise ghar le jane ka</div></div>
+      <div id="cp133" class="clip capwrap kinw" data-start="49.440" data-duration="0.540" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp133t" style="--c:#FFC83D">yeh mauqa</div></div>
+      <div id="cp134" class="clip capwrap kinw" data-start="49.980" data-duration="0.980" data-track-index="5" style="z-index:250"><div class="cap kin latin" id="cp134t" style="--c:#FFFFFF">haath se jane mat do</div></div>
+      <div id="cp135" class="clip capwrap slamw" data-start="50.960" data-duration="0.740" data-track-index="5" style="z-index:250"><div class="cap slam latin" id="cp135t" style="--c:#FFFFFF">yaad rakho</div></div>
+      <div id="sh136" class="clip gfx" data-start="51.76" data-duration="0.96" data-track-index="1" style="z-index:10"><div class="gfx-in" id="sh136g"><div class="orb o1"></div><div class="orb o2"></div><div class="gfx-brand">DG TECH MACHINERY</div></div></div>
+      <div id="fl137" class="clip flash" data-start="51.710" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl137i"></div></div>
+      <div id="cp138" class="clip capwrap slamw" data-start="51.760" data-duration="0.960" data-track-index="5" style="z-index:250"><div class="cap slam latin" id="cp138t" style="--c:#FFC83D">THINK BIG</div></div>
+      <div id="sh139" class="shot" style="z-index:10"><div class="mv" id="sh139m"><video id="sh139v" class="clip" src="assets/footage/p5_banner.mp4" data-start="52.78" data-duration="2.05" data-media-start="1.3" data-track-index="1" muted playsinline></video></div></div>
+      <div id="fl140" class="clip flash" data-start="52.730" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl140i"></div></div>
+      <div id="sh141" class="clip gfx" data-start="54.83" data-duration="0.75" data-track-index="1" style="z-index:10"><div class="gfx-in" id="sh141g"><div class="orb o1"></div><div class="orb o2"></div><div class="gfx-brand">DG TECH MACHINERY</div></div></div>
+      <div id="fl142" class="clip flash" data-start="54.780" data-duration="0.3" data-track-index="2" style="z-index:300"><div class="flash-in" id="fl142i"></div></div>
+      <div id="cp143" class="clip capwrap slamw" data-start="52.780" data-duration="2.600" data-track-index="5" style="z-index:250"><div class="cap slam latin" id="cp143t" style="--c:#FFC83D">TO GET BIG</div></div>
+      <div id="end144" class="clip endcard" data-start="53.980" data-duration="2.000" data-track-index="6" style="z-index:260"><div class="end-in" id="end144i"><div class="end-logo">DG TECH MACHINERY</div><div class="end-sub">PET Recycling · Injection · Blow Moulding</div></div></div>
       <audio id="mix" class="clip" src="assets/audio/mix.wav" data-start="0" data-duration="55.98" data-track-index="0" data-volume="1"></audio>
     </div>
     <script>
@@ -233,227 +249,243 @@
       tl.to("#cp14t",{opacity:0,duration:0.1,ease:"power2.in"},5.900);
       tl.fromTo("#cp15t",{opacity:0,y:30},{opacity:1,y:0,duration:0.16,ease:"power2.out"},6.000);
       tl.to("#cp15t",{opacity:0,duration:0.1,ease:"power2.in"},6.640);
-      tl.fromTo("#sh16m",{scale:1.0},{scale:1.12,duration:2.81,ease:"none"},6.8);
+      tl.fromTo("#sh16m",{scale:1.0},{scale:1.12,duration:1.25,ease:"none"},6.8);
       tl.fromTo("#fl17i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},6.750);
-      tl.fromTo("#pl18i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},6.800);
-      tl.to("#pl18i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},9.410);
-      tl.fromTo("#cp19t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},6.800);
-      tl.to("#cp19t",{opacity:0,duration:0.1,ease:"power2.in"},7.230);
-      tl.fromTo("#cp20t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},7.330);
-      tl.to("#cp20t",{opacity:0,duration:0.1,ease:"power2.in"},8.510);
-      tl.fromTo("#cp21t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},8.610);
-      tl.to("#cp21t",{opacity:0,duration:0.1,ease:"power2.in"},9.510);
-      tl.fromTo("#sh22m",{scale:1.22},{scale:1.08,duration:0.35,ease:"power3.out"},9.67);
-      tl.to("#sh22m",{scale:1.0,duration:1.25,ease:"none"},10.02);
-      tl.to("#sh22m",{x:26,y:-18,duration:0.045,ease:"none"},9.690);
-      tl.to("#sh22m",{x:-22,y:14,duration:0.045,ease:"none"},9.735);
-      tl.to("#sh22m",{x:16,y:10,duration:0.045,ease:"none"},9.780);
-      tl.to("#sh22m",{x:-10,y:-8,duration:0.045,ease:"none"},9.825);
-      tl.to("#sh22m",{x:6,y:4,duration:0.045,ease:"none"},9.870);
-      tl.to("#sh22m",{x:0,y:0,duration:0.045,ease:"none"},9.915);
-      tl.fromTo("#fl23i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},9.620);
-      tl.fromTo("#sh24m",{scale:1.0},{scale:1.12,duration:2.42,ease:"none"},11.27);
-      tl.fromTo("#fl25i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},11.220);
-      tl.fromTo("#pl26i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},9.670);
-      tl.to("#pl26i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},13.490);
-      tl.fromTo("#cp27t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},9.690);
-      tl.to("#cp27t",{opacity:0,duration:0.1,ease:"power2.in"},10.970);
-      tl.fromTo("#cp28t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},11.070);
-      tl.to("#cp28t",{opacity:0,duration:0.1,ease:"power2.in"},12.130);
-      tl.fromTo("#cp29t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},12.230);
-      tl.to("#cp29t",{opacity:0,duration:0.1,ease:"power2.in"},13.170);
-      tl.fromTo("#cp30t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},13.270);
-      tl.to("#cp30t",{opacity:0,duration:0.1,ease:"power2.in"},13.590);
-      tl.fromTo("#sh31m",{scale:1.0},{scale:1.12,duration:2.06,ease:"none"},13.75);
-      tl.fromTo("#fl32i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},13.700);
-      tl.fromTo("#cp33t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},13.750);
-      tl.to("#cp33t",{opacity:0,duration:0.1,ease:"power2.in"},14.510);
-      tl.fromTo("#cp34t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},14.610);
-      tl.to("#cp34t",{opacity:0,duration:0.1,ease:"power2.in"},15.710);
-      tl.fromTo("#sh35m",{scale:1.22},{scale:1.08,duration:0.35,ease:"power3.out"},15.87);
-      tl.to("#sh35m",{scale:1.0,duration:1.5100000000000002,ease:"none"},16.22);
-      tl.to("#sh35m",{x:26,y:-18,duration:0.045,ease:"none"},15.890);
-      tl.to("#sh35m",{x:-22,y:14,duration:0.045,ease:"none"},15.935);
-      tl.to("#sh35m",{x:16,y:10,duration:0.045,ease:"none"},15.980);
-      tl.to("#sh35m",{x:-10,y:-8,duration:0.045,ease:"none"},16.025);
-      tl.to("#sh35m",{x:6,y:4,duration:0.045,ease:"none"},16.070);
-      tl.to("#sh35m",{x:0,y:0,duration:0.045,ease:"none"},16.115);
-      tl.fromTo("#fl36i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},15.820);
-      tl.fromTo("#pl37i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},15.870);
-      tl.to("#pl37i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},17.530);
-      tl.fromTo("#cp38t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},15.870);
-      tl.to("#cp38t",{opacity:0,duration:0.1,ease:"power2.in"},16.570);
-      tl.fromTo("#cp39t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},16.670);
-      tl.fromTo("#cp39t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},16.890);
-      tl.to("#cp39t",{opacity:0,duration:0.1,ease:"power2.in"},17.630);
-      tl.fromTo("#sh40m",{scale:1.22},{scale:1.08,duration:0.35,ease:"power3.out"},17.79);
-      tl.to("#sh40m",{scale:1.0,duration:0.55,ease:"none"},18.14);
-      tl.to("#sh40m",{x:26,y:-18,duration:0.045,ease:"none"},17.810);
-      tl.to("#sh40m",{x:-22,y:14,duration:0.045,ease:"none"},17.855);
-      tl.to("#sh40m",{x:16,y:10,duration:0.045,ease:"none"},17.900);
-      tl.to("#sh40m",{x:-10,y:-8,duration:0.045,ease:"none"},17.945);
-      tl.to("#sh40m",{x:6,y:4,duration:0.045,ease:"none"},17.990);
-      tl.to("#sh40m",{x:0,y:0,duration:0.045,ease:"none"},18.035);
-      tl.fromTo("#fl41i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},17.740);
-      tl.fromTo("#sh42m",{scale:1.0},{scale:1.12,duration:1.3,ease:"none"},18.69);
-      tl.fromTo("#fl43i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},18.640);
-      tl.fromTo("#sh44m",{scale:1.14},{scale:1.0,duration:0.95,ease:"power1.out"},19.99);
-      tl.fromTo("#fl45i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},19.940);
-      tl.fromTo("#pl46i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},17.790);
-      tl.to("#pl46i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},20.740);
-      tl.fromTo("#cp47t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},17.790);
-      tl.to("#cp47t",{opacity:0,duration:0.1,ease:"power2.in"},18.560);
-      tl.fromTo("#cp48t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},18.660);
-      tl.to("#cp48t",{opacity:0,duration:0.1,ease:"power2.in"},19.340);
-      tl.fromTo("#cp49t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},19.440);
-      tl.to("#cp49t",{opacity:0,duration:0.1,ease:"power2.in"},20.160);
-      tl.fromTo("#cp50t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},20.260);
-      tl.to("#cp50t",{opacity:0,duration:0.1,ease:"power2.in"},20.840);
-      tl.fromTo("#sh51m",{scale:1.0},{scale:1.12,duration:1.8,ease:"none"},21.0);
-      tl.fromTo("#fl52i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},20.950);
-      tl.fromTo("#sh53m",{scale:1.0},{scale:1.12,duration:1.73,ease:"none"},22.8);
-      tl.fromTo("#fl54i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},22.750);
-      tl.fromTo("#cp55t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},21.000);
-      tl.to("#cp55t",{opacity:0,duration:0.1,ease:"power2.in"},21.400);
-      tl.fromTo("#cp56t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},21.500);
-      tl.to("#cp56t",{opacity:0,duration:0.1,ease:"power2.in"},22.020);
-      tl.fromTo("#cp57t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},22.120);
-      tl.to("#cp57t",{opacity:0,duration:0.1,ease:"power2.in"},22.880);
-      tl.fromTo("#cp58t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},22.980);
-      tl.fromTo("#cp58t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},23.200);
-      tl.to("#cp58t",{opacity:0,duration:0.1,ease:"power2.in"},24.430);
-      tl.fromTo("#sh59m",{scale:1.0},{scale:1.12,duration:2.9,ease:"none"},24.59);
-      tl.fromTo("#fl60i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},24.540);
-      tl.fromTo("#pl61i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},24.590);
-      tl.to("#pl61i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},27.290);
-      tl.fromTo("#cp62t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},24.690);
-      tl.to("#cp62t",{opacity:0,duration:0.1,ease:"power2.in"},25.190);
-      tl.fromTo("#cp63t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},25.290);
-      tl.to("#cp63t",{opacity:0,duration:0.1,ease:"power2.in"},25.810);
-      tl.fromTo("#cp64t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},25.910);
-      tl.to("#cp64t",{opacity:0,duration:0.1,ease:"power2.in"},26.190);
-      tl.fromTo("#cp65t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},26.290);
-      tl.to("#cp65t",{opacity:0,duration:0.1,ease:"power2.in"},27.390);
-      tl.fromTo("#sh66m",{scale:1.14},{scale:1.0,duration:2.63,ease:"power1.out"},27.55);
-      tl.fromTo("#fl67i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},27.500);
-      tl.fromTo("#cr68r",{opacity:0,y:160},{opacity:1,y:0,duration:0.35,ease:"power3.out"},27.55);
-      tl.to("#cr68r",{opacity:0,duration:0.2,ease:"power2.in"},29.980);
-      tl.fromTo("#cr68c0",{"--a":30},{"--a":100,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr68c0"]},27.55);
-      tl.fromTo("#cr68c1",{"--a":90},{"--a":160,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr68c1"]},27.55);
-      tl.fromTo("#cr68c2",{"--a":150},{"--a":220,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr68c2"]},27.55);
-      tl.fromTo("#cr68c3",{"--a":210},{"--a":280,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr68c3"]},27.55);
-      tl.fromTo("#cr68c4",{"--a":270},{"--a":340,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr68c4"]},27.55);
-      tl.fromTo("#cr68c5",{"--a":330},{"--a":400,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr68c5"]},27.55);
-      tl.fromTo("#cp69t",{opacity:0,y:30},{opacity:1,y:0,duration:0.16,ease:"power2.out"},27.600);
-      tl.to("#cp69t",{opacity:0,duration:0.1,ease:"power2.in"},28.170);
-      tl.fromTo("#cp70t",{opacity:0,y:30},{opacity:1,y:0,duration:0.16,ease:"power2.out"},28.270);
-      tl.to("#cp70t",{opacity:0,duration:0.1,ease:"power2.in"},28.990);
-      tl.fromTo("#cp71t",{opacity:0,y:30},{opacity:1,y:0,duration:0.16,ease:"power2.out"},29.090);
-      tl.to("#cp71t",{opacity:0,duration:0.1,ease:"power2.in"},30.080);
-      tl.fromTo("#sh72m",{scale:1.22},{scale:1.08,duration:0.35,ease:"power3.out"},30.24);
-      tl.to("#sh72m",{scale:1.0,duration:1.6099999999999999,ease:"none"},30.59);
-      tl.to("#sh72m",{x:26,y:-18,duration:0.045,ease:"none"},30.260);
-      tl.to("#sh72m",{x:-22,y:14,duration:0.045,ease:"none"},30.305);
-      tl.to("#sh72m",{x:16,y:10,duration:0.045,ease:"none"},30.350);
-      tl.to("#sh72m",{x:-10,y:-8,duration:0.045,ease:"none"},30.395);
-      tl.to("#sh72m",{x:6,y:4,duration:0.045,ease:"none"},30.440);
-      tl.to("#sh72m",{x:0,y:0,duration:0.045,ease:"none"},30.485);
-      tl.fromTo("#fl73i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},30.190);
-      tl.fromTo("#pl74i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},30.240);
-      tl.to("#pl74i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},32.000);
-      tl.fromTo("#cp75t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},30.260);
-      tl.to("#cp75t",{opacity:0,duration:0.1,ease:"power2.in"},31.180);
-      tl.fromTo("#cp76t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},31.280);
-      tl.to("#cp76t",{opacity:0,duration:0.1,ease:"power2.in"},32.100);
-      tl.fromTo("#sh77m",{scale:1.0},{scale:1.12,duration:1.6,ease:"none"},32.26);
-      tl.fromTo("#fl78i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},32.210);
-      tl.fromTo("#sh79m",{scale:1.0},{scale:1.12,duration:1.15,ease:"none"},33.86);
-      tl.fromTo("#fl80i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},33.810);
-      tl.fromTo("#sh81m",{scale:1.14},{scale:1.0,duration:0.74,ease:"power1.out"},35.01);
-      tl.fromTo("#fl82i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},34.960);
-      tl.fromTo("#cp83t",{opacity:0,y:30},{opacity:1,y:0,duration:0.16,ease:"power2.out"},32.280);
-      tl.to("#cp83t",{opacity:0,duration:0.1,ease:"power2.in"},32.950);
-      tl.fromTo("#cp84t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},33.050);
-      tl.to("#cp84t",{opacity:0,duration:0.1,ease:"power2.in"},33.570);
-      tl.fromTo("#cp85t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},33.670);
-      tl.to("#cp85t",{opacity:0,duration:0.1,ease:"power2.in"},34.770);
-      tl.fromTo("#cp86t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},34.870);
-      tl.to("#cp86t",{opacity:0,duration:0.1,ease:"power2.in"},35.650);
-      tl.fromTo("#sh87m",{scale:1.0},{scale:1.12,duration:1.57,ease:"none"},35.81);
-      tl.fromTo("#fl88i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},35.760);
-      tl.fromTo("#cp89t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},35.860);
-      tl.to("#cp89t",{opacity:0,duration:0.1,ease:"power2.in"},36.260);
-      tl.fromTo("#cp90t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},36.360);
-      tl.fromTo("#cp90t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},36.580);
-      tl.to("#cp90t",{opacity:0,duration:0.1,ease:"power2.in"},37.280);
-      tl.fromTo("#sh91m",{scale:1.14,x:90},{scale:1.14,x:-90,duration:2.5,ease:"none"},37.44);
-      tl.fromTo("#fl92i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},37.390);
-      tl.fromTo("#sh93m",{scale:1.0},{scale:1.12,duration:2.4,ease:"none"},39.94);
-      tl.fromTo("#fl94i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},39.890);
-      tl.fromTo("#sh95m",{scale:1.0},{scale:1.12,duration:2.48,ease:"none"},42.34);
-      tl.fromTo("#fl96i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},42.290);
-      tl.fromTo("#pl97i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},37.440);
-      tl.to("#pl97i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},44.620);
-      tl.fromTo("#cp98t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},37.480);
-      tl.to("#cp98t",{opacity:0,duration:0.1,ease:"power2.in"},38.500);
-      tl.fromTo("#cp99t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},38.600);
-      tl.to("#cp99t",{opacity:0,duration:0.1,ease:"power2.in"},39.160);
-      tl.fromTo("#cp100t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},39.260);
-      tl.to("#cp100t",{opacity:0,duration:0.1,ease:"power2.in"},40.120);
-      tl.fromTo("#cp101t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},40.220);
-      tl.to("#cp101t",{opacity:0,duration:0.1,ease:"power2.in"},41.420);
-      tl.fromTo("#cp102t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},41.520);
-      tl.to("#cp102t",{opacity:0,duration:0.1,ease:"power2.in"},42.240);
-      tl.fromTo("#cp103t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},42.340);
-      tl.fromTo("#cp103t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},42.560);
-      tl.to("#cp103t",{opacity:0,duration:0.1,ease:"power2.in"},43.440);
-      tl.fromTo("#cp104t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},43.540);
-      tl.to("#cp104t",{opacity:0,duration:0.1,ease:"power2.in"},44.280);
-      tl.fromTo("#cp105t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},44.380);
-      tl.to("#cp105t",{opacity:0,duration:0.1,ease:"power2.in"},44.720);
-      tl.fromTo("#sh106m",{scale:1.0},{scale:1.12,duration:3.5,ease:"none"},44.88);
-      tl.fromTo("#fl107i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},44.830);
-      tl.fromTo("#cp108t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},44.880);
-      tl.to("#cp108t",{opacity:0,duration:0.1,ease:"power2.in"},45.560);
-      tl.fromTo("#cp109t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},45.660);
-      tl.to("#cp109t",{opacity:0,duration:0.1,ease:"power2.in"},46.240);
-      tl.fromTo("#cp110t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},46.340);
-      tl.to("#cp110t",{opacity:0,duration:0.1,ease:"power2.in"},47.320);
-      tl.fromTo("#cp111t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},47.420);
-      tl.to("#cp111t",{opacity:0,duration:0.1,ease:"power2.in"},48.280);
-      tl.fromTo("#sh112m",{scale:1.0},{scale:1.12,duration:1.3,ease:"none"},48.44);
-      tl.fromTo("#fl113i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},48.390);
-      tl.fromTo("#sh114g",{scale:1.0},{scale:1.12,duration:1.96,ease:"none"},49.74);
-      tl.fromTo("#fl115i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},49.690);
-      tl.fromTo("#cp116t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},48.480);
-      tl.to("#cp116t",{opacity:0,duration:0.1,ease:"power2.in"},49.340);
-      tl.fromTo("#cp117t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},49.440);
-      tl.to("#cp117t",{opacity:0,duration:0.1,ease:"power2.in"},49.880);
-      tl.fromTo("#cp118t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},49.980);
-      tl.to("#cp118t",{opacity:0,duration:0.1,ease:"power2.in"},50.860);
-      tl.fromTo("#cp119t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},50.960);
-      tl.fromTo("#cp119t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},51.180);
-      tl.to("#cp119t",{opacity:0,duration:0.1,ease:"power2.in"},51.600);
-      tl.fromTo("#sh120g",{scale:1.22},{scale:1.08,duration:0.35,ease:"power3.out"},51.76);
-      tl.to("#sh120g",{scale:1.0,duration:0.61,ease:"none"},52.11);
-      tl.to("#sh120g",{x:26,y:-18,duration:0.045,ease:"none"},51.780);
-      tl.to("#sh120g",{x:-22,y:14,duration:0.045,ease:"none"},51.825);
-      tl.to("#sh120g",{x:16,y:10,duration:0.045,ease:"none"},51.870);
-      tl.to("#sh120g",{x:-10,y:-8,duration:0.045,ease:"none"},51.915);
-      tl.to("#sh120g",{x:6,y:4,duration:0.045,ease:"none"},51.960);
-      tl.to("#sh120g",{x:0,y:0,duration:0.045,ease:"none"},52.005);
-      tl.fromTo("#fl121i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},51.710);
-      tl.fromTo("#cp122t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},51.760);
-      tl.fromTo("#cp122t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},51.980);
-      tl.to("#cp122t",{opacity:0,duration:0.1,ease:"power2.in"},52.620);
-      tl.fromTo("#sh123m",{scale:1.0},{scale:1.12,duration:2.05,ease:"none"},52.78);
-      tl.fromTo("#fl124i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},52.730);
-      tl.fromTo("#sh125g",{scale:1.0},{scale:1.12,duration:0.75,ease:"none"},54.83);
-      tl.fromTo("#fl126i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},54.780);
-      tl.fromTo("#cp127t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},52.780);
-      tl.fromTo("#cp127t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},53.000);
-      tl.to("#cp127t",{opacity:0,duration:0.1,ease:"power2.in"},55.280);
-      tl.fromTo("#end128i",{opacity:0,y:60},{opacity:1,y:0,duration:0.4,ease:"power3.out"},53.980);
+      tl.fromTo("#sh18m",{scale:1.0},{scale:1.12,duration:1.56,ease:"none"},8.05);
+      tl.fromTo("#fl19i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},8.000);
+      tl.fromTo("#pl20i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},8.100);
+      tl.to("#pl20i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},9.410);
+      tl.fromTo("#cp21t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},6.800);
+      tl.to("#cp21t",{opacity:0,duration:0.1,ease:"power2.in"},7.230);
+      tl.fromTo("#cp22t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},7.330);
+      tl.to("#cp22t",{opacity:0,duration:0.1,ease:"power2.in"},8.510);
+      tl.fromTo("#cp23t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},8.610);
+      tl.to("#cp23t",{opacity:0,duration:0.1,ease:"power2.in"},9.510);
+      tl.fromTo("#sh24m",{scale:1.22},{scale:1.08,duration:0.35,ease:"power3.out"},9.67);
+      tl.to("#sh24m",{scale:1.0,duration:1.25,ease:"none"},10.02);
+      tl.to("#sh24m",{x:26,y:-18,duration:0.045,ease:"none"},9.690);
+      tl.to("#sh24m",{x:-22,y:14,duration:0.045,ease:"none"},9.735);
+      tl.to("#sh24m",{x:16,y:10,duration:0.045,ease:"none"},9.780);
+      tl.to("#sh24m",{x:-10,y:-8,duration:0.045,ease:"none"},9.825);
+      tl.to("#sh24m",{x:6,y:4,duration:0.045,ease:"none"},9.870);
+      tl.to("#sh24m",{x:0,y:0,duration:0.045,ease:"none"},9.915);
+      tl.fromTo("#fl25i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},9.620);
+      tl.fromTo("#sh26m",{scale:1.0},{scale:1.12,duration:2.42,ease:"none"},11.27);
+      tl.fromTo("#fl27i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},11.220);
+      tl.fromTo("#pl28i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},9.670);
+      tl.to("#pl28i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},13.490);
+      tl.fromTo("#cp29t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},9.690);
+      tl.to("#cp29t",{opacity:0,duration:0.1,ease:"power2.in"},10.970);
+      tl.fromTo("#cp30t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},11.070);
+      tl.to("#cp30t",{opacity:0,duration:0.1,ease:"power2.in"},12.130);
+      tl.fromTo("#cp31t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},12.230);
+      tl.to("#cp31t",{opacity:0,duration:0.1,ease:"power2.in"},13.170);
+      tl.fromTo("#cp32t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},13.270);
+      tl.to("#cp32t",{opacity:0,duration:0.1,ease:"power2.in"},13.590);
+      tl.fromTo("#sh33m",{scale:1.0},{scale:1.12,duration:2.06,ease:"none"},13.75);
+      tl.fromTo("#fl34i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},13.700);
+      tl.fromTo("#cp35t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},13.750);
+      tl.to("#cp35t",{opacity:0,duration:0.1,ease:"power2.in"},14.510);
+      tl.fromTo("#cp36t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},14.610);
+      tl.to("#cp36t",{opacity:0,duration:0.1,ease:"power2.in"},15.710);
+      tl.fromTo("#sh37m",{scale:1.0},{scale:1.12,duration:0.85,ease:"none"},15.87);
+      tl.fromTo("#fl38i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},15.820);
+      tl.fromTo("#sh39m",{scale:1.22},{scale:1.08,duration:0.35,ease:"power3.out"},16.72);
+      tl.to("#sh39m",{scale:1.0,duration:0.66,ease:"none"},17.07);
+      tl.to("#sh39m",{x:26,y:-18,duration:0.045,ease:"none"},16.740);
+      tl.to("#sh39m",{x:-22,y:14,duration:0.045,ease:"none"},16.785);
+      tl.to("#sh39m",{x:16,y:10,duration:0.045,ease:"none"},16.830);
+      tl.to("#sh39m",{x:-10,y:-8,duration:0.045,ease:"none"},16.875);
+      tl.to("#sh39m",{x:6,y:4,duration:0.045,ease:"none"},16.920);
+      tl.to("#sh39m",{x:0,y:0,duration:0.045,ease:"none"},16.965);
+      tl.fromTo("#fl40i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},16.670);
+      tl.fromTo("#pl41i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},16.770);
+      tl.to("#pl41i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},17.530);
+      tl.fromTo("#cp42t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},15.870);
+      tl.to("#cp42t",{opacity:0,duration:0.1,ease:"power2.in"},16.570);
+      tl.fromTo("#cp43t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},16.670);
+      tl.fromTo("#cp43t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},16.890);
+      tl.to("#cp43t",{opacity:0,duration:0.1,ease:"power2.in"},17.630);
+      tl.fromTo("#sh44m",{scale:1.22},{scale:1.08,duration:0.35,ease:"power3.out"},17.79);
+      tl.to("#sh44m",{scale:1.0,duration:0.55,ease:"none"},18.14);
+      tl.to("#sh44m",{x:26,y:-18,duration:0.045,ease:"none"},17.810);
+      tl.to("#sh44m",{x:-22,y:14,duration:0.045,ease:"none"},17.855);
+      tl.to("#sh44m",{x:16,y:10,duration:0.045,ease:"none"},17.900);
+      tl.to("#sh44m",{x:-10,y:-8,duration:0.045,ease:"none"},17.945);
+      tl.to("#sh44m",{x:6,y:4,duration:0.045,ease:"none"},17.990);
+      tl.to("#sh44m",{x:0,y:0,duration:0.045,ease:"none"},18.035);
+      tl.fromTo("#fl45i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},17.740);
+      tl.fromTo("#sh46m",{scale:1.0},{scale:1.12,duration:1.3,ease:"none"},18.69);
+      tl.fromTo("#fl47i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},18.640);
+      tl.fromTo("#sh48m",{scale:1.14},{scale:1.0,duration:0.95,ease:"power1.out"},19.99);
+      tl.fromTo("#fl49i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},19.940);
+      tl.fromTo("#pl50i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},17.790);
+      tl.to("#pl50i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},20.740);
+      tl.fromTo("#cp51t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},17.790);
+      tl.to("#cp51t",{opacity:0,duration:0.1,ease:"power2.in"},18.560);
+      tl.fromTo("#cp52t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},18.660);
+      tl.to("#cp52t",{opacity:0,duration:0.1,ease:"power2.in"},19.340);
+      tl.fromTo("#cp53t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},19.440);
+      tl.to("#cp53t",{opacity:0,duration:0.1,ease:"power2.in"},20.160);
+      tl.fromTo("#cp54t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},20.260);
+      tl.to("#cp54t",{opacity:0,duration:0.1,ease:"power2.in"},20.840);
+      tl.fromTo("#sh55m",{scale:1.0},{scale:1.12,duration:1.8,ease:"none"},21.0);
+      tl.fromTo("#fl56i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},20.950);
+      tl.fromTo("#sh57m",{scale:1.0},{scale:1.12,duration:1.73,ease:"none"},22.8);
+      tl.fromTo("#fl58i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},22.750);
+      tl.fromTo("#cp59t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},21.000);
+      tl.to("#cp59t",{opacity:0,duration:0.1,ease:"power2.in"},21.400);
+      tl.fromTo("#cp60t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},21.500);
+      tl.to("#cp60t",{opacity:0,duration:0.1,ease:"power2.in"},22.020);
+      tl.fromTo("#cp61t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},22.120);
+      tl.to("#cp61t",{opacity:0,duration:0.1,ease:"power2.in"},22.880);
+      tl.fromTo("#cp62t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},22.980);
+      tl.fromTo("#cp62t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},23.200);
+      tl.to("#cp62t",{opacity:0,duration:0.1,ease:"power2.in"},24.430);
+      tl.fromTo("#sh63m",{scale:1.0},{scale:1.12,duration:1.3,ease:"none"},24.59);
+      tl.fromTo("#fl64i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},24.540);
+      tl.fromTo("#sh65m",{scale:1.0},{scale:1.12,duration:1.6,ease:"none"},25.89);
+      tl.fromTo("#fl66i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},25.840);
+      tl.fromTo("#pl67i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},25.940);
+      tl.to("#pl67i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},27.290);
+      tl.fromTo("#cp68t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},24.690);
+      tl.to("#cp68t",{opacity:0,duration:0.1,ease:"power2.in"},25.190);
+      tl.fromTo("#cp69t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},25.290);
+      tl.to("#cp69t",{opacity:0,duration:0.1,ease:"power2.in"},25.810);
+      tl.fromTo("#cp70t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},25.910);
+      tl.to("#cp70t",{opacity:0,duration:0.1,ease:"power2.in"},26.190);
+      tl.fromTo("#cp71t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},26.290);
+      tl.to("#cp71t",{opacity:0,duration:0.1,ease:"power2.in"},27.390);
+      tl.fromTo("#sh72m",{scale:1.14},{scale:1.0,duration:2.63,ease:"power1.out"},27.55);
+      tl.fromTo("#fl73i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},27.500);
+      tl.fromTo("#cr74r",{opacity:0,y:160},{opacity:1,y:0,duration:0.35,ease:"power3.out"},27.55);
+      tl.to("#cr74r",{opacity:0,duration:0.2,ease:"power2.in"},29.980);
+      tl.fromTo("#cr74c0",{"--a":30},{"--a":100,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr74c0"]},27.55);
+      tl.fromTo("#cr74c1",{"--a":90},{"--a":160,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr74c1"]},27.55);
+      tl.fromTo("#cr74c2",{"--a":150},{"--a":220,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr74c2"]},27.55);
+      tl.fromTo("#cr74c3",{"--a":210},{"--a":280,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr74c3"]},27.55);
+      tl.fromTo("#cr74c4",{"--a":270},{"--a":340,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr74c4"]},27.55);
+      tl.fromTo("#cr74c5",{"--a":330},{"--a":400,duration:2.63,ease:"none",onUpdate:carouselPose,onUpdateParams:["#cr74c5"]},27.55);
+      tl.fromTo("#cp75t",{opacity:0,y:30},{opacity:1,y:0,duration:0.16,ease:"power2.out"},27.600);
+      tl.to("#cp75t",{opacity:0,duration:0.1,ease:"power2.in"},28.170);
+      tl.fromTo("#cp76t",{opacity:0,y:30},{opacity:1,y:0,duration:0.16,ease:"power2.out"},28.270);
+      tl.to("#cp76t",{opacity:0,duration:0.1,ease:"power2.in"},28.990);
+      tl.fromTo("#cp77t",{opacity:0,y:30},{opacity:1,y:0,duration:0.16,ease:"power2.out"},29.090);
+      tl.to("#cp77t",{opacity:0,duration:0.1,ease:"power2.in"},30.080);
+      tl.fromTo("#sh78m",{scale:1.0},{scale:1.12,duration:0.95,ease:"none"},30.24);
+      tl.fromTo("#fl79i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},30.190);
+      tl.fromTo("#sh80m",{scale:1.22},{scale:1.08,duration:0.35,ease:"power3.out"},31.19);
+      tl.to("#sh80m",{scale:1.0,duration:0.66,ease:"none"},31.540000000000003);
+      tl.to("#sh80m",{x:26,y:-18,duration:0.045,ease:"none"},31.210);
+      tl.to("#sh80m",{x:-22,y:14,duration:0.045,ease:"none"},31.255);
+      tl.to("#sh80m",{x:16,y:10,duration:0.045,ease:"none"},31.300);
+      tl.to("#sh80m",{x:-10,y:-8,duration:0.045,ease:"none"},31.345);
+      tl.to("#sh80m",{x:6,y:4,duration:0.045,ease:"none"},31.390);
+      tl.to("#sh80m",{x:0,y:0,duration:0.045,ease:"none"},31.435);
+      tl.fromTo("#fl81i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},31.140);
+      tl.fromTo("#pl82i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},31.240);
+      tl.to("#pl82i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},32.000);
+      tl.fromTo("#cp83t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},30.260);
+      tl.to("#cp83t",{opacity:0,duration:0.1,ease:"power2.in"},31.180);
+      tl.fromTo("#cp84t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},31.280);
+      tl.to("#cp84t",{opacity:0,duration:0.1,ease:"power2.in"},32.100);
+      tl.fromTo("#sh85m",{scale:1.0},{scale:1.12,duration:1.6,ease:"none"},32.26);
+      tl.fromTo("#fl86i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},32.210);
+      tl.fromTo("#sh87m",{scale:1.0},{scale:1.12,duration:1.15,ease:"none"},33.86);
+      tl.fromTo("#fl88i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},33.810);
+      tl.fromTo("#sh89m",{scale:1.14},{scale:1.0,duration:0.74,ease:"power1.out"},35.01);
+      tl.fromTo("#fl90i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},34.960);
+      tl.fromTo("#cp91t",{opacity:0,y:30},{opacity:1,y:0,duration:0.16,ease:"power2.out"},32.280);
+      tl.to("#cp91t",{opacity:0,duration:0.1,ease:"power2.in"},32.950);
+      tl.fromTo("#cp92t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},33.050);
+      tl.to("#cp92t",{opacity:0,duration:0.1,ease:"power2.in"},33.570);
+      tl.fromTo("#cp93t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},33.670);
+      tl.to("#cp93t",{opacity:0,duration:0.1,ease:"power2.in"},34.770);
+      tl.fromTo("#cp94t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},34.870);
+      tl.to("#cp94t",{opacity:0,duration:0.1,ease:"power2.in"},35.650);
+      tl.fromTo("#sh95m",{scale:1.0},{scale:1.12,duration:0.85,ease:"none"},35.81);
+      tl.fromTo("#fl96i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},35.760);
+      tl.fromTo("#sh97m",{scale:1.0},{scale:1.12,duration:0.72,ease:"none"},36.66);
+      tl.fromTo("#fl98i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},36.610);
+      tl.fromTo("#cp99t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},35.860);
+      tl.to("#cp99t",{opacity:0,duration:0.1,ease:"power2.in"},36.260);
+      tl.fromTo("#cp100t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},36.360);
+      tl.fromTo("#cp100t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},36.580);
+      tl.to("#cp100t",{opacity:0,duration:0.1,ease:"power2.in"},37.280);
+      tl.fromTo("#sh101m",{scale:1.0},{scale:1.12,duration:1.6,ease:"none"},37.44);
+      tl.fromTo("#fl102i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},37.390);
+      tl.fromTo("#sh103m",{scale:1.14,x:90},{scale:1.14,x:-90,duration:1.8,ease:"none"},39.04);
+      tl.fromTo("#fl104i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},38.990);
+      tl.fromTo("#sh105m",{scale:1.0},{scale:1.12,duration:1.5,ease:"none"},40.84);
+      tl.fromTo("#fl106i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},40.790);
+      tl.fromTo("#sh107m",{scale:1.0},{scale:1.12,duration:2.48,ease:"none"},42.34);
+      tl.fromTo("#fl108i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},42.290);
+      tl.fromTo("#pl109i",{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(1.6)"},39.090);
+      tl.to("#pl109i",{opacity:0,y:-30,duration:0.2,ease:"power2.in"},44.620);
+      tl.fromTo("#cp110t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},37.480);
+      tl.to("#cp110t",{opacity:0,duration:0.1,ease:"power2.in"},38.500);
+      tl.fromTo("#cp111t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},38.600);
+      tl.to("#cp111t",{opacity:0,duration:0.1,ease:"power2.in"},39.160);
+      tl.fromTo("#cp112t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},39.260);
+      tl.to("#cp112t",{opacity:0,duration:0.1,ease:"power2.in"},40.120);
+      tl.fromTo("#cp113t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},40.220);
+      tl.to("#cp113t",{opacity:0,duration:0.1,ease:"power2.in"},41.420);
+      tl.fromTo("#cp114t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},41.520);
+      tl.to("#cp114t",{opacity:0,duration:0.1,ease:"power2.in"},42.240);
+      tl.fromTo("#cp115t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},42.340);
+      tl.fromTo("#cp115t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},42.560);
+      tl.to("#cp115t",{opacity:0,duration:0.1,ease:"power2.in"},43.440);
+      tl.fromTo("#cp116t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},43.540);
+      tl.to("#cp116t",{opacity:0,duration:0.1,ease:"power2.in"},44.280);
+      tl.fromTo("#cp117t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},44.380);
+      tl.to("#cp117t",{opacity:0,duration:0.1,ease:"power2.in"},44.720);
+      tl.fromTo("#sh118m",{scale:1.0},{scale:1.12,duration:1.6,ease:"none"},44.88);
+      tl.fromTo("#fl119i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},44.830);
+      tl.fromTo("#sh120m",{scale:1.0},{scale:1.12,duration:1.9,ease:"none"},46.48);
+      tl.fromTo("#fl121i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},46.430);
+      tl.fromTo("#cp122t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},44.880);
+      tl.to("#cp122t",{opacity:0,duration:0.1,ease:"power2.in"},45.560);
+      tl.fromTo("#cp123t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},45.660);
+      tl.to("#cp123t",{opacity:0,duration:0.1,ease:"power2.in"},46.240);
+      tl.fromTo("#cp124t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},46.340);
+      tl.to("#cp124t",{opacity:0,duration:0.1,ease:"power2.in"},47.320);
+      tl.fromTo("#cp125t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},47.420);
+      tl.to("#cp125t",{opacity:0,duration:0.1,ease:"power2.in"},48.280);
+      tl.fromTo("#sh126m",{scale:1.0},{scale:1.12,duration:1.3,ease:"none"},48.44);
+      tl.fromTo("#fl127i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},48.390);
+      tl.fromTo("#sh128m",{scale:1.0},{scale:1.12,duration:1.0,ease:"none"},49.74);
+      tl.fromTo("#fl129i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},49.690);
+      tl.fromTo("#sh130g",{scale:1.0},{scale:1.12,duration:0.96,ease:"none"},50.74);
+      tl.fromTo("#fl131i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},50.690);
+      tl.fromTo("#cp132t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},48.480);
+      tl.to("#cp132t",{opacity:0,duration:0.1,ease:"power2.in"},49.340);
+      tl.fromTo("#cp133t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},49.440);
+      tl.to("#cp133t",{opacity:0,duration:0.1,ease:"power2.in"},49.880);
+      tl.fromTo("#cp134t",{opacity:0,y:80,scale:0.85,filter:"blur(12px)"},{opacity:1,y:0,scale:1,filter:"blur(0px)",duration:0.22,ease:"power3.out"},49.980);
+      tl.to("#cp134t",{opacity:0,duration:0.1,ease:"power2.in"},50.860);
+      tl.fromTo("#cp135t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},50.960);
+      tl.fromTo("#cp135t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},51.180);
+      tl.to("#cp135t",{opacity:0,duration:0.1,ease:"power2.in"},51.600);
+      tl.fromTo("#sh136g",{scale:1.22},{scale:1.08,duration:0.35,ease:"power3.out"},51.76);
+      tl.to("#sh136g",{scale:1.0,duration:0.61,ease:"none"},52.11);
+      tl.to("#sh136g",{x:26,y:-18,duration:0.045,ease:"none"},51.780);
+      tl.to("#sh136g",{x:-22,y:14,duration:0.045,ease:"none"},51.825);
+      tl.to("#sh136g",{x:16,y:10,duration:0.045,ease:"none"},51.870);
+      tl.to("#sh136g",{x:-10,y:-8,duration:0.045,ease:"none"},51.915);
+      tl.to("#sh136g",{x:6,y:4,duration:0.045,ease:"none"},51.960);
+      tl.to("#sh136g",{x:0,y:0,duration:0.045,ease:"none"},52.005);
+      tl.fromTo("#fl137i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},51.710);
+      tl.fromTo("#cp138t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},51.760);
+      tl.fromTo("#cp138t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},51.980);
+      tl.to("#cp138t",{opacity:0,duration:0.1,ease:"power2.in"},52.620);
+      tl.fromTo("#sh139m",{scale:1.0},{scale:1.12,duration:2.05,ease:"none"},52.78);
+      tl.fromTo("#fl140i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},52.730);
+      tl.fromTo("#sh141g",{scale:1.0},{scale:1.12,duration:0.75,ease:"none"},54.83);
+      tl.fromTo("#fl142i",{opacity:0.55},{opacity:0,duration:0.25,ease:"power2.out"},54.780);
+      tl.fromTo("#cp143t",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},52.780);
+      tl.fromTo("#cp143t",{x:-14},{x:0,duration:0.12,ease:"elastic.out(1,0.3)"},53.000);
+      tl.to("#cp143t",{opacity:0,duration:0.1,ease:"power2.in"},55.280);
+      tl.fromTo("#end144i",{opacity:0,y:60},{opacity:1,y:0,duration:0.4,ease:"power3.out"},53.980);
       window.__timelines["main"] = tl;
       tl.seek(0);
     </script>
