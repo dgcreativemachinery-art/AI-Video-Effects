@@ -12,7 +12,8 @@ VO_SRC = {  # real voice sources
     "IMG_8130": f"{UP}/1c40cdb7-IMG_8130.MOV", "IMG_8137": f"{UP}/2a2cc835-IMG_8137.MOV",
     "IMG_8144": f"{UP}/ec9840b2-IMG_8144.MOV", "IMG_8148": f"{UP}/b851cdcf-IMG_8148.MOV",
     "IMG_8158": f"{UP}/329f7f4d-IMG_8158.MOV", "IMG_8165": f"{UP}/0a9ac861-IMG_8165.MOV",
-    "v7": f"{UP}/8c1bbc93-v7.mp4", "v8": f"{UP}/a9ccdb03-v8.mp4", "v_10": f"{UP}/8cb36b2a-v_10.mp4",
+    "v7": f"{UP}/8c1bbc93-v7.mp4", "v8": f"{UP}/a9ccdb03-v8.mp4", "v_10": f"{UP}/8cb36b2a-v_10.mp4", "v_13": f"{UP}/a319b65c-v_13.mp4",
+    "v_14": f"{UP}/16105261-v_14.mp4", "v_15": f"{UP}/e5d97b18-v_15.mp4",
 }
 W, H, GAP = 2160, 3840, 0.06
 
@@ -24,23 +25,44 @@ EDL = [
       shots=[("p1_walk_bales", 1.28, None, "in")],
       caps=[("یہ صرف کباڑ", .02, .84, "chin", None), ("نہیں ہے!", .84, 1.34, "chin", "red")],
       pill=("DG TECH MACHINERY", 0, 1.34)),
+ dict(id="A2", vo=("v_13", 3.15, 6.90), sfx=[("whoosh-short", -.05, .45), ("impact-bass-2", .55, .45)],
+      shots=[("r1_flakes_presenter", 3.15, None, "out")],
+      caps=[("یہ کروڑوں کا", .03, 1.09, "chin", "gold"), ("وہ خام مال ہے", 1.09, 1.95, "chin", None),
+            ("دنیا جسے", 1.95, 2.79, "chin", None), ("کچرا سمجھتی ہے", 2.79, 3.75, "chin", "red")]),
  dict(id="B", vo=("IMG_8137", 0.95, 2.48), sfx=[("whoosh-short", -.05, .5)],
       shots=[("p2_pick_bottles", 0.95, None, "out")], carousel="f2",
       caps=[("لیکن ہم اس سے", .05, .79, "chin", None), ("نوٹ کمائیں گے", .79, 1.53, "chin", "gold")]),
- dict(id="M", dur=14.6, music_up=True, sfx=[("whoosh-cinematic", -.1, .5), ("heartbeat", 2.6, .7),
-      ("whoosh", 2.85, .45), ("whoosh-short", 5.75, .45), ("impact-bass-2", 8.75, .6),
-      ("whoosh", 11.65, .45), ("riser", 4.6, .35), ("impact-bass-1", 14.45, .7)],
-      shots=[("ai1", 0.2, 2.9, "in"), ("ai2", 0.3, 2.9, "left"), ("ai3", 0.2, 2.9, "shake"),
-             ("ai4", 0.3, 2.9, "out"), ("f1_flakes_yard", 1.5, 3.0, "in")],
-      caps=[("گلی گلی سے پلاسٹک", .2, 2.8, "kin", "cyan"), ("زبردست دھلائی", 3.1, 5.7, "kin", "cyan"),
-            ("کرشنگ!", 6.0, 8.6, "slam", "red"), ("چمکدار فلیکس", 8.9, 11.5, "kin", "lime"),
-            ("اصل گیم: کیش جنریشن", 11.8, 14.5, "kin", "gold")],
-      pill=("STEP 1 · دھلائی اور کرشنگ", 0.2, 11.5)),
+ dict(id="M1", vo=("v_14", 0.85, 3.66), sfx=[("whoosh-cinematic", -.1, .45)],
+      shots=[("r2_bales_conveyor", 0.0, None, "in")],
+      caps=[("پہلا قدم", .0, .53, "kin", "gold"), ("گلی گلی سے بکھرے ہوئے", .53, 1.81, "kin", None),
+            ("اس پلاسٹک کو اٹھانا", 1.81, 2.81, "kin", "cyan")],
+      pill=("STEP 1 · دھلائی", 0, 2.81)),
+ dict(id="M2", vo=("v_14", 3.66, 7.68), sfx=[("whoosh", -.05, .45), ("whoosh-short", 1.95, .35)],
+      shots=[("r2_bales_conveyor", 4.6, 1.6, "shake"), ("ai1_wash_tank", 0.5, None, "in")],
+      caps=[("پھر DG Tech مشینری کے", .02, 1.40, "kin", "gold"), ("اس طاقتور پلانٹ پر", 1.40, 2.56, "kin", None),
+            ("اس کی زبردست دھلائی", 2.56, 3.60, "kin", "cyan"), ("ہوتی ہے", 3.60, 4.02, "kin", None)],
+      pill=("STEP 1 · دھلائی", 0, 4.02)),
+ dict(id="M3", vo=("v_14", 7.66, 9.72), sfx=[("whoosh-short", -.05, .4), ("sparkle", 1.0, .35)],
+      shots=[("ai2_wash_jets", 1.4, None, "in")],
+      caps=[("جہاں میل کا", .0, .86, "kin", None), ("نام و نشان مٹ جاتا ہے", .86, 2.06, "kin", "cyan")]),
+ dict(id="M4", vo=("v_15", 0.0, 1.86), sfx=[("impact-bass-1", 0.0, .6), ("glitch-1", .78, .3)],
+      shots=[("ai3_crusher", 0.4, None, "shake")],
+      caps=[("اس کے بعد آتا ہے", .0, .8, "kin", None), ("کرشنگ کا وہ مرحلہ", .8, 1.86, "slam", "red")],
+      pill=("STEP 2 · کرشنگ", 0, 1.86)),
+ dict(id="M5", vo=("v_15", 2.25, 5.40), sfx=[("whoosh", -.05, .4), ("impact-bass-2", .87, .4), ("whoosh-short", 1.55, .35)],
+      shots=[("ai3_crusher", 2.3, 0.9, "shake"), ("ai4_flakes_pour", 0.5, 1.3, "in"), ("r1_flakes_presenter", 0.0, None, "out")],
+      caps=[("جس پر سخت بوتلیں", .0, .87, "kin", None), ("ریزہ ریزہ ہو کر", .87, 1.65, "kin", "red"),
+            ("چمکدار فلیکس", 1.65, 2.47, "kin", "lime"), ("بن جاتی ہیں", 2.47, 3.15, "kin", None)],
+      pill=("STEP 2 · کرشنگ", 0, 3.15)),
+ dict(id="M6", vo=("v_15", 5.92, 9.45), sfx=[("whoosh", -.05, .4), ("riser", -.2, .3), ("impact-bass-1", 1.98, .7), ("chime", 2.1, .45)],
+      shots=[("f1_flakes_yard", 1.5, 1.8, "in"), ("r1_flakes_presenter", 7.0, None, "in")],
+      caps=[("اور یہیں سے", .0, .5, "kin", None), ("شروع ہوتی ہے", .5, 1.12, "kin", None),
+            ("اصل گیم", 1.12, 1.98, "kin", "gold"), ("یعنی کیش جنریشن!", 1.98, 3.53, "top", "gold")]),
  dict(id="C", vo=("v_10", 0.72, 3.62), sfx=[("whoosh", -.05, .45)],
       shots=[("m5_factory_wide", 0.0, None, "in", 0.86)],
       caps=[("اب ان فلیکس کو", .1, .7, "kin", None), ("ڈالا جاتا ہے", .7, 1.32, "kin", None),
             ("DG Tech", 1.32, 1.7, "kin", "gold"), ("انجیکشن مولڈنگ مشین میں", 1.7, 2.9, "kin", "cyan")],
-      pill=("STEP 2 · پری فارم", 0, 2.9)),
+      pill=("STEP 3 · پری فارم", 0, 2.9)),
  dict(id="D", vo=("IMG_8144", 0.70, 3.33), sfx=[("whoosh-short", -.05, .45)],
       shots=[("p3_preforms", 0.70, None, "out")], carousel="f3",
       caps=[("جو بناتی ہے", .05, .72, "chin", None), ("ایک بہترین اور", .72, 1.54, "chin", None),
@@ -48,7 +70,7 @@ EDL = [
  dict(id="E", vo=("v_10", 5.96, 7.92), sfx=[("whoosh", -.05, .45), ("impact-bass-2", .38, .45)],
       shots=[("m2_blow_load", 2.0, None, "shake")],
       caps=[("اور پھر آخری وار", .02, 1.04, "kin", "red"), ("بلو مولڈنگ مشین", 1.04, 1.96, "kin", "cyan")],
-      pill=("STEP 3 · بوتل", 0, 1.96)),
+      pill=("STEP 4 · بوتل", 0, 1.96)),
  dict(id="F", vo=("IMG_8148", 1.83, 5.32), sfx=[("whoosh-short", 1.55, .4), ("pop", 2.75, .5)],
       shots=[("p4_heater", 1.83, 1.6, "in"), ("m6_mould_closeup", 3.0, 1.15, "in"), ("m3_mould_bottles", 0.0, None, "out")],
       caps=[("جو اس پری فارم کو", .02, .79, "chin", None), ("سیکنڈوں میں", .79, 1.41, "kin", "gold"),
@@ -57,12 +79,12 @@ EDL = [
       shots=[("m4_compressor", 0.83, None, "in")],
       caps=[("اب سنیے", .05, .55, "kin", None), ("پرافٹ کا فارمولا", .55, 1.57, "slam", "gold")]),
  dict(id="H", vo=("v7", 2.12, 9.50), sfx=[("whoosh", 2.35, .4), ("whoosh-short", 4.95, .4), ("sparkle", 4.9, .45), ("chime", 6.15, .4)],
-      shots=[("ai5", 0.3, 2.4, "in"), ("s2_stacks_b", 1.0, 2.6, "left"), ("m1_blow_button", 2.0, None, "out")],
+      shots=[("s2_stacks_b", 1.0, 2.5, "left"), ("m1_blow_button", 1.0, 2.4, "in"), ("ai5_cash", 0.5, None, "in")],
       caps=[("یہ تیار شدہ بوتلیں", .04, 1.16, "kin", None), ("اور پروڈکٹس جب", 1.16, 1.82, "kin", None),
             ("بڑی بڑی ملٹی نیشنل", 1.82, 2.78, "kin", "cyan"), ("کمپنیوں کو سپلائی ہوتی ہیں", 2.78, 4.08, "kin", None),
             ("تو لاگت سے", 4.08, 4.9, "kin", None), ("کئی گنا زیادہ منافع", 4.9, 6.1, "slam", "gold"),
             ("سیدھا آپ کی جیب میں", 6.1, 6.94, "kin", "lime"), ("آتا ہے!", 6.94, 7.38, "kin", None)],
-      pill=("STEP 4 · پرافٹ", 0, 7.38)),
+      pill=("STEP 5 · پرافٹ", 0, 7.38)),
  dict(id="I1", vo=("v8", 0.16, 3.66), sfx=[("whoosh", -.05, .45)],
       shots=[("s1_stacks_a", 1.0, None, "in")],
       caps=[("بغیر ایک روپیہ", .0, .78, "kin", None), ("فالتو گنوائے", .78, 1.46, "kin", "red"),
@@ -189,8 +211,10 @@ def build():
             sid += 1; g = f"cp{sid}"
             col = ACC[acc]
             latin = all(ord(ch) < 128 for ch in txt)
+            wstyle = style
+            if style == "top": style = "slam"
             cls = f"cap {style}{' latin' if latin else ''}"
-            els.append(f'<div id="{g}" class="clip capwrap {style}w" data-start="{st+a:.3f}" data-duration="{b-a:.3f}" data-track-index="5" style="z-index:250"><div class="{cls}" id="{g}t" style="--c:{col}">{html.escape(txt)}</div></div>')
+            els.append(f'<div id="{g}" class="clip capwrap {wstyle}w" data-start="{st+a:.3f}" data-duration="{b-a:.3f}" data-track-index="5" style="z-index:250"><div class="{cls}" id="{g}t" style="--c:{col}">{html.escape(txt)}</div></div>')
             if style == "slam":
                 js.append(f'tl.fromTo("#{g}t",{{opacity:0,scale:2.2}},{{opacity:1,scale:1,duration:0.22,ease:"power4.in"}},{st+a:.3f});')
                 js.append(f'tl.fromTo("#{g}t",{{x:-14}},{{x:0,duration:0.12,ease:"elastic.out(1,0.3)"}},{st+a+0.22:.3f});')
@@ -246,6 +270,7 @@ TEMPLATE = r"""<!doctype html>
       .chinw { top: 2180px; }
       .kinw { top: 2250px; }
       .slamw { top: 1700px; }
+      .topw { top: 700px; }
       .cap { font-family: "Nastaliq"; font-weight: 700; direction: rtl; color: var(--c); white-space: nowrap; overflow: visible; }
       .cap.chin { font-size: 132px; line-height: 2.0; text-shadow: 0 8px 30px rgba(0,0,0,.85), 0 0 4px rgba(0,0,0,.9); }
       .cap.kin { font-size: 190px; line-height: 2.0; text-shadow: 0 10px 40px rgba(0,0,0,.9), 0 0 6px rgba(0,0,0,.8);
