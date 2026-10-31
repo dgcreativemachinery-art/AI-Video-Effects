@@ -5,3 +5,7 @@ raw/
 renders/
 snapshots/
 node_modules/
+.hyperframes/
+assets/audio/
+assets/cards/
+raw/
